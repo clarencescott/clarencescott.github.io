@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link id="stylesheet" rel="stylesheet" href="/styles/style.css">
+    <link id="stylesheet" rel="stylesheet" href="/styles/reach.css">
+    <script defer src="/script/reach.js"></script>
+    <script defer src="/script/script.js"></script>
+    <script defer src="/script/toggle.js"></script>
+    <title>Clarence Scott</title>
+</head>
+<body>
+<header id="header"><h1>Clarence Scott</h1></header>
+<nav>
+    <li><a href="/index.html">home</a></li>
+    <li><a href="/directory/portfolio.html">resume</a></li>
+    <li class="on"><a href="#">outreach</a></li>
+    <li><a href="#" onclick="mode()">option</a></li>
+    <li class="right"><a href="#" onclick="contact()">contact</a></li>
+</nav>
+<main>
+    <section class="outreach" id="outreach">
+        <p id="outLearn" onload="reach()"> I am a passionate and dedicated technology enthusiast with a track record of driving innovation and positive change in various communities. Through initiatives such as <a href="https://www.facebook.com/destination.innovation.2023" style="color: aqua; font-weight: bolder;">Destination Innovation</a>, I've been involved in STEM and STEAM programs aimed at transforming the technological landscape in Flint, MI, by fostering creativity and knowledge sharing. At the <a href="https://www.facebook.com/AppathonMSU/" style="font-weight:bolder; color:white;">MSU Appathon</a> hosted at Michigan State University - Flint campus, I contributed to the development of applications designed to empower healthcare professionals with vital research tools for delivering optimal patient care and documentation. Additionally, my involvement in the FLINT I.G.N.I.T.E program has allowed me to make a tangible impact by providing learning opportunities for incarcerated individuals, helping them acquire valuable skills in semi-truck driving and obtaining certifications upon reintegration into society. These experiences reflect my commitment to leveraging technology for the betterment of communities and individuals alike.</p>
+        <section class="imgContainer">
+            <img src="/images/RoboticsTeam2.jpg" alt="">
+            <img src="/images/RoboticsTeam.jpg" alt="">
+            <img src="/images/Appathon.jpg" alt="">
+            <img src="/images/Appathon2.jpg" alt="">
+        </section>
+    </section>
+    <div class="contact" id="contact">
+        <button class="closeBtn" onclick="contact()">close</button>
+        <form action="">
+            <section>
+                <label for="">Name<input type="text" name="" id=""></label>
+                <label for="">Email<input type="text" name="" id=""></label>
+                <label for="">Subject<input type="text" name="" id=""></label>
+            </section>
+            <section>
+                <label for="">Write A Note<textarea name="" id="" cols="30" rows="10"></textarea></label>
+                <button type="submit" class="mailBtn">EMAIL</button>
+            </section>
+        </form>
+    </div>
+</main>
+<footer id="footer"><p>Proudly created by Astro Clare Technology | All rights reserved &copy; 2024</p></footer>
+</body>
+</html>

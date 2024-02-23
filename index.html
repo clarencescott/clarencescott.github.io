@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="images/CS logo.png" type="image/x-icon">
+    <link id="stylesheet" rel="stylesheet" href="styles/style.css">
+    <script defer src="script/script.js"></script>
+    <script defer src="script/toggle.js"></script>
+    <title>Clarence Scott</title>
+</head>
+<body>
+<header id="header"><h1>Clarence Scott</h1></header>
+<nav>
+    <!--Commenting out this anchor so it doesn't show on the home page. Going to simply uncomment to use it.-->
+    <!---- <li><a href="/index.html"> home </a></li>-->
+    <li><a href="/directory/portfolio.html">resume</a></li>
+    <li><a href="/directory/reach.html">outreach</a></li>
+    <li><a href="#" onclick="mode()">option</a></li>
+    <li class="right"><a href="#" onclick="contact()">contact</a></li>
+</nav>
+<main>
+    <div class="contact" id="contact">
+        <button class="closeBtn" onclick="contact()">close</button>
+        <form action="">
+            <section>
+                <label for="">Name<input type="text" name="" id=""></label>
+                <label for="">Email<input type="text" name="" id=""></label>
+                <label for="">Subject<input type="text" name="" id=""></label>
+            </section>
+            <section>
+                <label for="">Write A Note<textarea name="" id="" cols="30" rows="10"></textarea></label>
+                <button type="submit" class="mailBtn">EMAIL</button>
+            </section>
+        </form>
+    </div>
+    <div class="workGroup" id="workGroup">
+        <div class="cubes" id="cubes" style="background:url(/images/_Cubes/astroctLogo.png); background-size: cover;background-position: center;">
+            <div class="cubeTitle" id="cubeTitle">
+                <h1>Astro Clare Technology</h1>
+                <a href="https://astroclaretechnology.github.io/" target="_blank">Website</a><br>
+                <caption>Holding position of CTO & Founder at Astro Clare Technology</caption>
+            </div>
+        </div>
+        <div class="cubes" id="cubes" style="background:url(/images/_Cubes/SSS.png); background-size: cover;background-position: center;">
+            <div class="cubeTitle" id="cubeTitle">
+                <h1>Some Sweet Soul</h1>
+                <a href="https://someweetsoul.com/" target="_blank">Order Now</a><br>
+                <caption> IT Admin / Software Developer for Some Sweet Soul</caption>
+            </div>
+        </div>
+        <div class="cubes" id="cubes" style="background:url(/images/_Cubes/magnificips.jpg); background-size: cover;background-position: center;">
+            <div class="cubeTitle" id="cubeTitle">
+                <h1>MagnifiClips - Barbershop</h1>
+                <a href="https://www.timtylerbarber.com/" target="_blank">Book Now</a><br>
+                <caption>IT Admin / Software Developer for MagnifiClips</caption>
+            </div>
+        </div>
+    </div>
+    <div class="workGroup" id="workGroup">
+        <div class="cubes" id="cubes" style="background:url(/images/_Cubes/linkedInBG.png); background-size: cover;background-position: center;">
+            <div class="cubeTitle" id="cubeTitle">
+                <h1>LinkedIn Profile</h1>
+                <a href="https://www.linkedin.com/in/clarence-scott/" target="_blank">Link to Page</a><br>
+                <caption>Learn more about my professional background on LinkedIN</caption>
+            </div>
+        </div>
+        <div class="cubes" id="cubes" style="background:url(/images/_Cubes/Fresh\ Fien.png); background-size: cover;background-position: center;">
+            <div class="cubeTitle" id="cubeTitle">
+                <h1>Fresh Fien Podcast</h1>
+                <a href="#">YouTube Channel</a><br>
+                <caption>Director/Video Editor for this podcast.</caption>
+            </div>
+        </div>
+        <div class="cubes" id="cubes" style="background:url(/images/_Cubes/DI_LOGO.png); background-size: cover;background-position: center;">
+            <div class="cubeTitle" id="cubeTitle">
+                <h1>Destination Innovation</h1>
+                <a href="#">FaceBook Page</a><br>
+                <caption>Assistant to Director of Destination Innovation</caption>
+            </div>
+        </div>
+    </div>
+</main>
+<footer id="footer"><p>Proudly created by Astro Clare Technology | All rights reserved &copy; 2024</p></footer>
+</body>
+</html>

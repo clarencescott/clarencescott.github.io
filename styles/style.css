@@ -1,0 +1,272 @@
+*{
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+}
+::selection{
+    color: darkslategrey;
+    background-color: lightgrey;
+}
+body{
+    background:linear-gradient(to bottom right, #080052, rgb(73, 0, 107));
+    height: 100vh;
+    font-family:'Times New Roman', Times, serif;
+}
+body a{
+    text-decoration: none;
+}
+header{
+    color: lightgrey;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    text-align: center;
+    background-color: rgba(211, 211, 211, 0.027);
+    height: 5vh;
+}
+/*Navigation Bar Styling*/
+nav{
+    background-color: rgba(211, 211, 211, 0.048);
+    text-align: center;
+    height: 5vh;
+}
+nav li{
+    list-style-type: none;
+    font-size: 16px;
+    text-transform: uppercase;
+}
+nav li a{
+    display: block;
+    float: left;
+    padding: 14px 40px;
+    color: lightgrey;
+}
+nav li.on a{
+    text-decoration: underline solid whitesmoke 1px;
+}
+/*Floating the contact button to the right of the container*/
+nav li.right{
+    float: right;
+}
+main{
+    height: 85vh;
+    display: grid;
+}
+.workGroup{
+    height: 20vh;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+}
+.cubes{
+    height: 300px;
+    width: 500px;
+    border: solid 1px rgba(211, 211, 211, 0.404);
+    transition: all .4s ease-in-out;
+}
+.cubes:hover{
+    scale: 1.1;
+}
+.cubeTitle{
+    background-color: rgba(150, 150, 150, 0.974);
+    padding:3px 10px;
+}
+footer{
+    position:fixed;
+    width: 100vw;
+    height: 5vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: #090058;
+    color: lightgrey;
+}
+#contact{
+    display: none;
+    position:absolute;
+    z-index: 1;
+    transform: translate(0px,10px);
+    height: 65vh;
+    width: 50vw;
+    background-color: black;
+    color: lightgrey;
+    border-radius: 50px;
+}
+.contact .closeBtn{
+    transform: translate(850px,20px);
+    border: none;
+    background: none;
+    text-transform: uppercase;
+    cursor: pointer;
+    color: lightgray;
+}
+.mailBtn{
+    width: 10vw;
+    margin: 10px auto;
+    padding: 5px 30px;
+    border: none;
+    background: rgba(148, 159, 255, 0.39);
+    color: white;
+    cursor: pointer;
+}
+.mailBtn:hover{
+    background-color: rgb(14, 25, 170);
+    color: white;
+}
+form{
+    display: grid;
+    height: 60vh;
+}
+form section{
+    height: 20vh;
+    line-height: 50px;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+}
+form section label{
+    font-size: 22px;
+    width: 25vw;
+    display: grid;
+}
+form section label input{
+    font-size: 20px;
+    background: rgba(148, 159, 255, 0.39);
+    outline: none;
+    border: none;
+    border-bottom: 1px solid black;
+}
+form textarea{
+    background:none;
+    background: rgba(148, 159, 255, 0.39);
+    outline: none;
+    border: none;
+    border-bottom: 1px solid black;
+}
+@media screen and (max-width:1179px) {
+    body{
+        background:linear-gradient(to bottom right, #080052, rgb(73, 0, 107));
+        height: 140vh;
+        font-family:'Times New Roman', Times, serif;
+    }
+    
+nav li.right{
+    float: none;
+}
+/*Navigation Bar Styling*/
+nav{
+    background-color: rgba(211, 211, 211, 0.048);
+    text-align: center;
+    height: 5vh;
+    display: flex;
+}
+nav li{
+    list-style-type: none;
+    font-size: 16px;
+    text-transform: uppercase;
+}
+nav li a{
+    display: block;
+    float: left;
+    padding: 10px 12px;
+}
+nav li.on a{
+    text-decoration: underline solid whitesmoke 1px;
+}
+/*Floating the contact button to the right of the container*/
+nav li.right{
+    float: right;
+}
+.on{
+    display: none;
+}
+main{
+    height: 85vh;
+    display: grid;
+}
+.workGroup{
+    height: 60vh;
+    width: 100%;
+    display: grid;
+    justify-content: space-evenly;
+}
+.cubes{
+    height: 150px;
+    width: 300px;
+    border: solid 1px rgba(211, 211, 211, 0.404);
+}
+.cubes:hover{
+    scale: none;
+}
+.cubeTitle{
+    background-color: rgba(150, 150, 150, 0.974);
+}
+.cubeTitle h1{
+    font-size: 18px;
+}
+.cubeTitle a, .cubeTitle caption{
+    font-size: 14px;
+}
+#contact{
+    display: none;
+    position:fixed;
+    z-index: 1;
+    transform: translate(0px,10px);
+    height:70vh;
+    width: 90vw;
+    background-color: rgba(211, 211, 211, 0.999);
+    border-radius: 5px;
+    color: black;
+}
+.contact .closeBtn{
+    transform: translate(300px,10px);
+    border: none;
+    background: none;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+.mailBtn{
+    width: 30vw;
+    margin: 10px auto;
+    padding: 5px 30px;
+    border: none;
+    background: darkslategray;
+    color: white;
+    cursor: pointer;
+}
+.mailBtn:hover{
+    background-color: darkseagreen;
+    color: black;
+}
+form{
+    display: grid;
+    text-align: center;
+    height: 60vh;
+}
+form section{
+    height: 20vh;
+    line-height: 50px;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+}
+form section label{
+    font-size: 22px;
+    width: 70vw;
+    display: grid;
+}
+form section label input{
+    font-size: 20px;
+    background: rgba(143, 188, 143, 0.39);
+    outline: none;
+    border: none;
+    border-bottom: 1px solid black;
+}
+form textarea{
+    background:none;
+    background: rgba(143, 188, 143, 0.39);
+    outline: none;
+    border: none;
+    border-bottom: 1px solid black;
+}
+}
