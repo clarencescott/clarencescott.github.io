@@ -1,0 +1,159 @@
+*{
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+}
+body{
+    font-family: "Playfair Display", serif;
+    background: rgb(255, 255, 255);
+    color: rgb(0, 193, 241);
+    letter-spacing: 2px;
+}
+main{
+    height: 90vh;
+}
+#btnMode{
+    outline: none;
+    border: none;
+    background: none;
+}
+.works{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.card{
+    border:solid rgb(0, 193, 241) 1px;
+    margin: 15px 0px;
+    height: 150px;
+    width: 300px;
+    background-color: white;
+    border-radius: 1px;
+} 
+.titleCard{
+    text-align: center;
+    height: 25px;
+    width: 250px;
+    background-color: black;
+    margin: 0 auto;
+    transform: translateY(130px);
+    border: solid 1px #d0caff;
+    border-radius: 3px;
+}
+.titleCard a{
+    color: rgb(143, 233, 255);
+    text-decoration: none;
+}
+.reach, .projects{
+    padding: 15px;
+    text-align: center;
+}
+.images img{
+    height: 150px;
+}
+footer{
+    color: initial;
+    height: 80vh;
+    text-align: center;
+    background: rgb(0, 193, 241);
+}
+footer form{
+    padding: 20px 60px;
+    display: grid;
+}
+footer label{
+    margin: 15px 0;
+    display: grid;
+}
+footer label input{
+    background-color: rgb(143, 233, 255);
+    border: none;
+    border-bottom: 1px solid black;
+    font-size: 20px; 
+}
+footer label textarea{
+    background-color: rgb(143, 233, 255);
+    border: none;
+    border-bottom: 1px solid black;
+}
+
+@media screen and (max-width:1180px) {
+    *{
+        margin: 0;
+        padding: 0;
+        scroll-behavior: smooth;
+    }
+    body{
+        font-family: "Playfair Display", serif;
+        background: rgb(255, 255, 255);
+        color: rgb(0, 193, 241);
+        letter-spacing: 2px;
+    }
+    main{
+        height: 90vh;
+    }
+    #btnMode{
+        outline: none;
+        border: none;
+        background: none;
+    }
+    .works{
+        display: grid;
+        align-items: center;
+        justify-content: center;
+    }
+    .card{
+        border:solid rgb(0, 193, 241) 1px;
+        margin: 15px 0px;
+        height: 150px;
+        width: 300px;
+        background-color: white;
+        border-radius: 1px;
+    } 
+    .titleCard{
+        text-align: center;
+        height: 25px;
+        width: 250px;
+        background-color: black;
+        margin: 0 auto;
+        transform: translateY(130px);
+        border: solid 1px #d0caff;
+        border-radius: 3px;
+    }
+    .titleCard a{
+        color: rgb(143, 233, 255);
+        text-decoration: none;
+    }
+    .reach, .projects{
+        padding: 15px;
+        text-align: center;
+    }
+    .images img{
+        height: 150px;
+    }
+    footer{
+        color: initial;
+        height: 90vh;
+        text-align: center;
+        background: rgb(0, 193, 241);
+    }
+    footer form{
+        padding: 20px 20px;
+        display: grid;
+    }
+    footer label{
+        margin: 15px 0;
+        display: grid;
+    }
+    footer label input{
+        background-color: rgb(143, 233, 255);
+        border: none;
+        border-bottom: 1px solid black;
+        font-size: 20px; 
+    }
+    footer label textarea{
+        background-color: rgb(143, 233, 255);
+        border: none;
+        border-bottom: 1px solid black;
+    }
+}
