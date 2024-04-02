@@ -7,13 +7,6 @@ body{
     color: #a498fa;
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
 }
-footer{
-    height: 5vh;
-    width: 100vw;
-    text-align: center;
-    position: fixed;
-    bottom: 0;
-}
 .landIMG{
     height: 100vh;
     background: url(/images/Logo/C_LOGO_bkbg.jpeg);
