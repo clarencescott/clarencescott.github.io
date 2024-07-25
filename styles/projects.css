@@ -1,0 +1,66 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    height: 100vh;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    
+}
+.info-box{
+    background-color: aquamarine;
+    height: 60vh;
+    width: 60vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.info-intro{
+    background-color: aqua;
+    height: 60vh;
+    width: 25vw;
+}
+.info-info{
+    background-color: aqua;
+    height: 60vh;
+    width:35vw;
+}
+.titles{
+    text-align: center;
+    display: grid;
+    align-items: center;
+    height: 5vh;
+    background-color:blanchedalmond ;
+}
+.image{
+    height: 55vh;
+    background:url(images/Projects/templateImage.jpg);
+    background-size: contain;
+    background-position: center;
+}
+.caption{
+    height: 20vh;
+    text-align: center;
+    background-color: rgb(126, 253, 143);
+}
+.video{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 40vh;
+    background-color: thistle;
+}
+.gallery{
+    background-color: black;
+    height: 15vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.gallery img{
+    height: 12vh;
+    width: 7vw;
+    background-color: rgb(253, 186, 63);
+}
