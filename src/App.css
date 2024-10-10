@@ -1,0 +1,374 @@
+.floating-nav-button{
+  transform: translate(-2rem,2rem);
+  height: 100px;
+  width: 100px;
+  position:fixed;
+  right: 0;
+  background:url(/BioGlytch_Logo-removebg.png);
+  background-size: cover;
+  background-position: center;
+  border-radius: 180px;
+  transition: box-shadow .5s;
+  cursor: pointer;
+}
+.floating-nav-button:hover{
+  box-shadow:0px 0px 10px aqua;
+}
+.navigation{
+  position: fixed;
+  height: 100vh;
+  width: 500px;
+  background-color: rgba(0, 0, 0, 0.89);
+  z-index: 1;
+  display: none;
+  visibility: hidden;
+}
+.navigation li{
+  justify-content: center;
+  text-align: right;
+  padding: 0rem 5rem;
+  display: flex;
+  height: 10vh;
+  flex-direction: column;
+  list-style: none;
+  transition: scale .2s;
+  letter-spacing: 2px;
+}
+.navigation li:hover{
+  scale: 1.09;
+  background-color: rgb(56, 56, 56);
+  box-shadow: 0px 0px 2px whitesmoke;
+}
+.navigation li:hover a{
+  color: rgb(0, 226, 226);
+}
+main{
+  height: 100vh;
+}
+/*Header Styling Section*/
+.header{
+  background: url(/header-bg.jpg);
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+}
+.header-contents{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 5em;
+  height: inherit;
+  letter-spacing: 1px;
+  background:rgba(0, 0, 0, 0.5);
+}
+.header h1{
+  font-size: 4rem;
+  color: whitesmoke;
+}
+.header h2{
+  font-size: 4rem;
+  color: aqua;
+  font-weight: 300;
+}
+.header h3{
+  width: 40vw;
+  font-size: 1.7rem;
+  font-weight: 200;
+  color: whitesmoke;
+}
+.header-call-to-action{
+display: inline-flex;
+justify-content: right;
+align-items: center;
+height: 5vh; 
+}
+.header button{
+  padding: 1rem 5rem;
+  margin: 0 1.5rem;
+  border: .3px solid aqua ;
+  letter-spacing: 1px;
+  outline: none;
+  box-shadow: 0px 0px 10px aqua;
+  cursor: pointer;
+  transition: scale .7s, background .9s;
+  border-radius: 5px;
+  background-color: black;
+}
+.header button:hover{
+  scale: 1.07;
+  background: aqua;
+  box-shadow: none;
+}
+.header button:hover a{
+  color: #555555;
+}
+/* Portfolio Section Styling Section */
+.portfolio{
+  height: 100vh;
+  padding: 0 5em;
+  display: flex;
+  justify-content: space-between;
+}
+.portfolio-contents{
+  width: 50vw;
+  height: 100%;
+  flex: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+.port-cards{
+  width: inherit;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.port-card{
+  height: 250px;
+  width: 450px;
+  background:black;
+  box-shadow: 0px 0px 7px rgb(0, 255, 255);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  transition: scale .5s, box-shadow .6s ease-in-out;
+  overflow: hidden;
+  color: #ccc;
+}
+.port-card img{
+  height: 300px;
+  width: inherit;
+}
+.projectLink{
+  color: white;
+  font-weight: bolder;
+  text-decoration: 1px underline dotted;
+  font-style: italic;
+}
+.left-side{
+  flex: 20%;
+}
+.right-side{
+  flex: 80%;
+  padding: 0 50px;
+}
+.port-card:hover{
+  scale: 1.05;
+  box-shadow: 0px 0px 20px rgb(92, 217, 255);
+}
+/*Latest Work - Portfolio Section*/
+.portfolio-latest{
+  text-align: center;
+  flex: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+}
+.current-work-box{
+  background-color: rgb(230, 230, 230);
+  box-shadow: 0px 0px 30px rgb(214, 214, 214);
+  border: solid 2px white;
+  border-radius: 10px;
+  height: 800px;
+  width: 600px;
+  padding: .8rem;
+}
+.mla-title{
+  text-align: left;
+}
+.mla-paragraph a{
+  color: rgb(51, 204, 204);
+  text-decoration: dotted .7px underline;
+}
+/*Contact Styling Section*/
+.contact{
+  height: 60vh;
+  display:grid;
+  align-items: center;
+  color: white;
+}
+.contact p{
+  text-align: center;
+  line-height: 20px;
+}
+/*Form Styling Section*/
+form{
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(126, 126, 126, 0.864);
+  max-width: 900px;
+  width: 100%;
+  margin: 0 auto;
+}
+form label{
+  display: block;
+  margin-bottom: 5px;
+  color: #ccc;
+}
+form input[type="text"],
+form input[type="email"],
+form input[type="tel"]{
+  width: 98%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border:none;
+  outline: none;
+  border-radius: 4px;
+  font-size: 16px;
+  background-color: #444;
+  color: #ccc;
+}
+form input:focus, form textarea:focus {
+  border: 1px solid rgb(0, 226, 226);
+  box-shadow: 0 0 15px rgba(0, 226, 226, 0.8);
+}
+form textarea{
+  resize: vertical;
+  min-height: 100px;
+  width: 100%;
+  background-color: #444;
+  color: #ccc;
+}
+form small{
+  display: block;
+  margin-bottom: 10px;
+  color: #00b5c2;
+}
+form button{
+  width: 100%;
+  padding: 10px;
+  background-color: rgb(39, 255, 255);
+  border: none;
+  border-radius: 4px;
+  color: #444;
+  font-size: 16px;
+  cursor:pointer;
+  transition: background-color .5s;
+}
+form button:hover{
+  background-color: rgb(0, 226, 226);
+}
+footer{
+  color: whitesmoke;
+  text-align: center;
+  padding: .5em;
+}
+/* Mobile-friendly CSS for iPhone 16 */
+@media only screen and (max-width: 1290px) {
+  .floating-nav-button {
+    transform: translate(-1rem, 1rem);
+    height: 80px;
+    width: 80px;
+  }
+
+  .navigation {
+    width: 100%;
+  }
+
+  .header-contents {
+    padding: 0 2em;
+  }
+
+  .header h1 {
+    font-size: 2.5rem;
+  }
+
+  .header h2 {
+    font-size: 2.5rem;
+  }
+
+  .header h3 {
+    width: 90vw;
+    font-size: 1.5rem;
+  }
+
+  .header-call-to-action {
+    justify-content: center;
+  }
+
+  .header button {
+    padding: 0.5rem 3rem;
+    margin: 0 1rem;
+  }
+
+  .portfolio {
+    flex-direction: column;
+    padding: 0 2em;
+    height: auto;
+  }
+
+  .portfolio-contents {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  /* Stack port cards vertically and stretch them out */
+  .port-cards {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .port-card {
+    height: 180px;
+    width: 100%; /* Stretching out cards */
+    max-width: 500px; /* Set a max width for nice layout */
+    margin-bottom: 20px;
+    padding: 20px; /* Add padding for text */
+    background: #333; /* Darker background for contrast */
+    color: #eee; /* Light text color */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    box-shadow: 0px 0px 7px rgb(0, 255, 255); /* Keep the shadow */
+  }
+
+  /* Remove the image from the port cards */
+  .port-card img {
+    display: none;
+  }
+
+  /* Reduce text size inside port cards */
+  .port-card .projectLink {
+    font-size: 1rem;
+  }
+
+  .contact {
+    height: auto;
+    margin: 0 auto;
+    width: 80%;
+  }
+
+  .contact p {
+    font-size: 1rem; /* Make the contact text smaller */
+    line-height: 1.4; /* Adjust line height for readability */
+  }
+
+  form {
+    padding: 10px;
+  }
+
+  form input[type="text"],
+  form input[type="email"],
+  form input[type="tel"],
+  form textarea {
+    width: 95%;
+  }
+
+  .current-work-box {
+    height: auto;
+    width: 100%;
+  }
+
+  footer {
+    padding: 1em;
+  }
+}
+
+/* Fix the right-side screen overflow issue */
+body {
+  overflow-x: hidden;
+}
