@@ -21,12 +21,12 @@ function App() {
     <div className="floating-nav-button" onClick={navOpen}></div>
     <Router>
     <div className="navigation"  id="navigation">
-      <li><Link to="/"><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="40" height="40" viewBox="0 0 80 80">
-<path fill="#E5C7FF" d="M6.5 77.5L6.5 26.286 39.996 6.58 73.5 26.286 73.5 77.5z"></path><path fill="#000" d="M39.996,7.16L73,26.572V77H7V26.572L39.996,7.16 M39.996,6L6,26v52h68V26L39.996,6L39.996,6z"></path><path fill="#95F1F1" d="M7 71H73V77H7z"></path><path fill="#95F1F1" d="M39.995 9.875L2.5 32.801 2.5 25.511 39.995 2.586 77.5 25.511 77.5 32.801z"></path><path fill="#000" d="M39.995,3.172L77,25.792v6.117L40.517,9.608l-0.522-0.319l-0.522,0.319L3,31.909v-6.117 L39.995,3.172 M39.995,2L2,25.231v8.462l37.995-23.231L78,33.692v-8.462L39.995,2L39.995,2z"></path><g><path fill="#fff" d="M28.5 42.5H51.5V77.5H28.5z"></path><path fill="#000" d="M51,43v34H29V43H51 M52,42H28v36h24V42L52,42z"></path></g><path fill="#000" d="M46.5 60A1.5 1.5 0 1 0 46.5 63A1.5 1.5 0 1 0 46.5 60Z"></path>
-</svg></Link></li>
-  <li><Link to="/#portfolio">Portfolio</Link></li>
-  <li><Link to="/#blog">Blog</Link></li>
-  <li><Link to="/#contact">Contact</Link></li>
+    <li><a href="#"><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="40" height="40" viewBox="0 0 80 80">
+            <path fill="#E5C7FF" d="M6.5 77.5L6.5 26.286 39.996 6.58 73.5 26.286 73.5 77.5z"></path><path fill="#000" d="M39.996,7.16L73,26.572V77H7V26.572L39.996,7.16 M39.996,6L6,26v52h68V26L39.996,6L39.996,6z"></path><path fill="#95F1F1" d="M7 71H73V77H7z"></path><path fill="#95F1F1" d="M39.995 9.875L2.5 32.801 2.5 25.511 39.995 2.586 77.5 25.511 77.5 32.801z"></path><path fill="#000" d="M39.995,3.172L77,25.792v6.117L40.517,9.608l-0.522-0.319l-0.522,0.319L3,31.909v-6.117 L39.995,3.172 M39.995,2L2,25.231v8.462l37.995-23.231L78,33.692v-8.462L39.995,2L39.995,2z"></path><g><path fill="#fff" d="M28.5 42.5H51.5V77.5H28.5z"></path><path fill="#000" d="M51,43v34H29V43H51 M52,42H28v36h24V42L52,42z"></path></g><path fill="#000" d="M46.5 60A1.5 1.5 0 1 0 46.5 63A1.5 1.5 0 1 0 46.5 60Z"></path>
+            </svg></a></li>
+        <li><a href="#portfolio">Portfolio</a></li>
+        <li><a href="#store">Shop Books</a></li>
+        <li><a href="#contact">Contact</a></li>
     </div>
     <main>
       <div className="header">
@@ -51,7 +51,7 @@ function App() {
             <div className="right-side">
               <h3>VIDAL AI Assistant</h3>
               <p>VIDAL (Vee-dal) AI Assistant is an AI developed for my home.</p>
-              <a className="projectLink" href="https://github.com/clarencescott/OfficeAIBeta">Office AI - Project</a>
+              <a className="projectLink" href="https://github.com/clarencescott/OfficeAIBeta">Office AI - Repo</a>
               <p>Coding Stack: C#, .NET, .NET Core</p>
             </div>
            </div>
@@ -62,7 +62,7 @@ function App() {
             <div className="right-side">
               <h3>Web Sites (LIVE)</h3>
               <p>Below is a list of live websites for clients, friends and family.</p>
-              <a className="projectLink" href="http://">Link to Project</a>
+              <a className="projectLink" href="http://">List of Sites</a>
               <p>Coding Stack: HTML, CSS, JavaScript, React</p>
             </div>
            </div>
@@ -76,7 +76,7 @@ function App() {
             <div className="right-side">
               <h3>Micro Board Projects</h3>
               <p>Various Projects with Arduino, RaspberryPi and ESP32 boards</p>
-              <a className="projectLink" href="http://">Link to Project</a>
+              <a className="projectLink" href="https://www.youtube.com/@BioGlytch">Link to Project</a>
               <p>Coding Stack: C#, Python, Kali Linux, Scripting, Bash</p>
             </div>
            </div>
@@ -88,7 +88,7 @@ function App() {
               <h3>S-T-E-E-L</h3>
               <p>Students Thriving in Engineering & Emerging Leadership,
                 is for anyone looking to start a web based portfolio.</p>
-              <a className="projectLink" href="/resources/STEEL Brochure.pdf" target="_blank">Link to Project</a>
+              <a className="projectLink" href="/resources/STEEL Brochure.pdf" target="_blank">Open Brochure</a>
               <p>Coding Stack: HTML, JavaScript, CSS</p>
             </div>
            </div>
@@ -101,7 +101,7 @@ function App() {
             <div className="right-side">
               <h3>Studies & Research</h3>
               <p>Personal research projects about various topics.</p>
-              <a className="projectLink" href="http://">View Studies</a>
+              <a className="projectLink" href="https://drive.google.com/drive/folders/1f8YpWvM0rcKZB6n5UMtvhQbJPLPW5BSG?usp=sharing">View Studies</a>
               <p>Coding Stack: Word (XML, Excel, HTML)</p>
             </div>
            </div>
@@ -112,7 +112,7 @@ function App() {
             <div className="right-side">
               <h3>Exhibitions</h3>
               <p>Video series for you to follow along with my travel ideas.</p>
-              <a className="projectLink" href="/public/resources/STEEL Brochure.pdf" target="_blank">Experience the Journey</a>
+              <a className="projectLink" href="https://www.youtube.com/@BioGlytch" target="_blank">Experience the Journey</a>
               <p>Coding Stack: NA</p>
             </div>
            </div>
@@ -137,13 +137,66 @@ function App() {
         </div>
 
       </div>
-      <div className="blog" id="blog"></div>
+      {/*Live Store*/}
+     <div class="divider-small"></div>
+    <div class="store-container" id="store">
+        <ul> 
+            <li><img src="/2.png" alt="" />
+                <strong>intro to html</strong>
+                <a href="https://astroclare.gumroad.com/l/ithtml"> buy </a> 
+
+            </li> 
+            <li>
+                <img src="/3.png" alt="" />
+                <strong>intro to css</strong>
+                <a href="https://astroclare.gumroad.com/l/itcss"> buy </a> 
+
+            </li> 
+            <li>
+                <img src="/4.png" alt="" />
+                <strong>intro to javascript</strong>
+                <a href="https://astroclare.gumroad.com/l/itjs"> buy </a> 
+
+            </li>
+            <li>
+                <img src="/7.png" alt="" />
+                <strong>computer fundamentals</strong>
+                <a href="https://astroclare.gumroad.com/l/cluyd"> buy </a> 
+
+            </li> 
+            <li>
+                <img src="/8.png" alt="" />
+                <strong>c#: basics to advanced</strong>
+                <a href="https://astroclare.gumroad.com/l/csb"> buy </a> 
+
+            </li> 
+            <li>
+                <img src="/9.png" alt="" />
+                <strong>S.T.E.E.L Brochure</strong>
+                <a href="/STEEL Brochure.pdf" download> download </a> 
+
+            </li>
+          {/*Template for book posting
+             <li>
+                <img src="/images/10.png" alt="">
+                <strong>Coming Soon</strong>
+                <a href="#"> Not Available </a> 
+
+            </li>*/}
+            <li>
+                <img src="/5.png" alt="" />
+                <strong>web development</strong>
+                <a href="https://astroclare.gumroad.com/l/wdwj"> buy </a> 
+
+            </li> 
+        </ul>
+    </div>
       <div className="contact" id="contact">
         <p>Phone: 810.241.8724 <br />
           Email: scottclarence5@gmail.com <br />
           Location: Michigan
         </p>
-      <form action="https://formsubmit.co/youremail@domain" method="post">
+      <form action="https://formsubmit.co/8e63060cad3ff531c9e63f4def1efc9d" method="post">
       {/* <!--Input sanitization for emails-->*/}
          <label htmlFor="email">Email:</label>
          <input type="email" name="email" id="email" required />

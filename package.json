@@ -1,6 +1,6 @@
 {
   "name": "clarence",
-  "private": true,
+  "homepage": "https://clarencescott.tech/",
   "version": "0.0.0",
   "type": "module",
   "scripts": {

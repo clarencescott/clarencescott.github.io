@@ -9,6 +9,12 @@ root{
   color: black;
   background-color: rgb(0, 241, 241);
 }
+::-webkit-scrollbar{
+  background-color:aqua;
+}
+::-webkit-scrollbar-thumb{
+  background-color: black;
+}
 a {
   font-weight: 500;
   text-decoration: none;
