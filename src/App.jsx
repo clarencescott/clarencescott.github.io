@@ -1,7 +1,24 @@
 import { useState } from 'react';
 import React from 'react';
-import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
+import { BrowserRouter as Router, Link } from 'react-router-dom';
 import './App.css';
+import TestPage from './directory/TestPage.jsx';
+import {
+  createBrowserRouter,
+  RouterProvider,
+} from "react-router-dom";
+
+
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <App />,
+  },
+  {
+    path: "TestPage",
+    element: <TestPage />,
+  }
+]);
 
 function navOpen() {
   if(document.getElementById("navigation").style.display == 'block'){
@@ -27,6 +44,7 @@ function App() {
         <li><a href="#portfolio">Portfolio</a></li>
         <li><a href="#store">Shop Books</a></li>
         <li><a href="#contact">Contact</a></li>
+        <li><Link to="/TestPage">Test Page</Link></li>
     </div>
     <main>
       <div className="header">
@@ -214,6 +232,10 @@ function App() {
       </div>
       <footer><p>Website Created by Clarence Scott | Astro Clare Technology | &copy; 2024 </p></footer>
     </main>
+
+    
+
+    <RouterProvider router={router} />
     </Router>
     </>
   )
