@@ -1,0 +1,111 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+body{
+    background-color: rgb(240, 240, 240);
+}
+/* Navigation */
+nav{
+    position:sticky;
+    top: 0;
+    background-color: #555;
+    padding: 1em;
+    text-align: center;
+}
+nav ul{
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+nav a{
+    color: #fff;
+    padding: .5em 1em;
+    text-decoration: none;
+    transition: color .3s ease;
+    text-transform: capitalize;
+}
+nav a:hover{
+    color: aqua;
+}
+/*Hero Section*/
+#hero{
+    background-color: rgb(5, 138, 138);
+    color: #fff;
+    padding: 5em 2em;
+    text-align: center;
+}
+#hero h1{
+    font-size: 2.5em;
+    margin-bottom: .5em;
+}
+#hero p{
+    font-size: 1.2em;
+}
+/*General Styling Section for the containers*/
+#about, #projects, #contact{
+    padding: 3em 2em;
+}
+#about h2, #projects h2, #contact h2{
+    font-size: 2em;
+    color: rgb(5, 138, 138);
+    margin-bottom: 1em;
+}
+#about p{
+    line-height: 1.6;
+}
+/*Projects Section */
+.project-card{
+    background-color: rgb(233, 233, 233);
+    border: 1px solid #ddd;
+    padding: 1em;
+    margin: 1em 0;
+}
+.project-card h3{
+    color: #555;
+}
+.project-card p{
+    color: #333;
+}
+/*Contact Section */
+form{
+    display: flex;
+    flex-direction: column;
+}
+label{
+    margin: .5em 0 .2em;
+    color: #555;
+}
+input ,textarea{
+    padding: .5em;
+    border: 1px solid #ddd;
+    margin-bottom: 1em;
+}
+button{
+    background-color: rgb(5, 138, 138);
+    color: #fff;
+    padding: .7em;
+    border: none;
+    cursor: pointer;
+    transition: background-color .4s ease;
+}
+button:hover{
+    background-color: rgb(3, 68, 68);
+}
+/* Footer*/
+footer{
+    text-align: center;
+    padding: 1em;
+    background-color: #333;
+    color: #fff;
+}
+footer a{
+    color: rgb(0, 158, 158);
+    text-decoration: none;
+    margin: 0 .5em;
+}
+footer a:hover{
+    text-decoration: underline;
+}
