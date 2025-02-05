@@ -1,0 +1,203 @@
+/* Reset and base styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f4f4f4;
+}
+
+h1, h2, h3 {
+    font-weight: 600;
+}
+
+/* Hero Section */
+.hero {
+    background-image: url('public/Tax-image.jpg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-align: center;
+    padding: 100px 20px;
+}
+.hero-text{
+    background-color: rgba(0, 0, 0, 0.925);
+    padding: 1em 0;
+    border-radius: 9px;
+}
+.hero h1 {
+    font-size: 3rem;
+}
+
+.hero p {
+    font-size: 1.5rem;
+    margin: 20px 0;
+}
+
+.cta-button {
+    background-color: #c70063;
+    color: white;
+    padding: 15px 25px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1.2rem;
+}
+
+.cta-button:hover {
+    background-color: #640a37;
+}
+
+/* Services Section */
+.services {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.services h2 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+}
+
+.service-container {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 30px;
+}
+
+.service {
+    width: 45%;
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.747);
+    border-radius: 8px;
+}
+
+.service h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.service p {
+    font-size: 1rem;
+}
+
+/* Social Proof Section */
+.social-proof {
+    background-color: #e9ecef;
+    padding: 30px 20px;
+    text-align: center;
+}
+
+.social-proof h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.social-proof p {
+    font-size: 1rem;
+    margin-bottom: 10px;
+}
+
+/* Resources Section */
+.resources {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.resources h2 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+}
+
+.resources ul {
+    list-style: none;
+}
+
+.resources li {
+    font-size: 1.2rem;
+    margin: 10px 0;
+}
+
+.resources a {
+    text-decoration: none;
+    color: #c70063;
+}
+
+.resources a:hover {
+    text-decoration: underline;
+}
+
+/* Contact Section */
+.contact {
+    padding: 50px 20px;
+    background-color: #fff;
+    text-align: center;
+}
+
+.contact h2 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+}
+
+.contact form {
+    display: grid;
+    gap: 15px;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.contact label {
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.contact input, .contact textarea, .contact select {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.contact button {
+    background-color: #c70063;
+    color: white;
+    padding: 15px 25px;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.contact button:hover {
+    background-color: #640a37;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #333;
+    color: white;
+}
+
+footer a {
+    color: #c70063;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+@media screen and (max-width:1180px) {
+    .service{
+        
+    height: 50vh;
+    overflow: scroll;
+    }
+}
