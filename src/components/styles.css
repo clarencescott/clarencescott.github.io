@@ -1,0 +1,315 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Playfair Display', sans-serif;
+  letter-spacing: .8px;
+  line-height: 1.6;
+  background-color: #fff;
+  color: #222;
+}
+
+
+h1, h2, h3 {
+  font-weight: bold;
+}
+
+/* Header */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: #ffffffbd;
+  position: fixed;
+  width: 100%;
+  top: 0;
+}
+
+header .logo img{
+  height: 64px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #222;
+  font-size: 1.1rem;
+}
+
+nav ul li a:hover{
+  color: #90c55e;
+}
+
+/* Hero Section */
+.hero {
+  height: 90vh;
+  background:url(/files/header-bg.webp);
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-top: 12vh;
+}
+.hero-content{
+  background-color: #ffffffe7;
+  height: inherit;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.hero-content h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+  font-weight: lighter;
+}
+
+.hero-content p {
+  font-size: 2rem;
+  font-weight: bolder;
+  margin-bottom: 20px;
+}
+
+.hero-content .cta-button{
+  width: 20%;
+  margin: 0 auto;
+}
+.cta-button {
+  padding: 10px 30px;
+  background-color: #90c55e;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  font-size: 1.2rem;
+  transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+  background-color: #068867;
+}
+
+/* Services Section */
+.section {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.service-cards {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  font-size: 1.2em;
+}
+
+.service-card {
+  padding: 1em;
+  border-radius: 10px;
+  width: 30%;
+  transition: scale .8s ease-in-out, box-shadow .9s ease-out;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.service-card img{
+  width: 50%;
+  border-radius: 5px;
+}
+.service-card:hover{
+  box-shadow: 0px 0px 7px rgba(0, 0, 0, 0.219);
+  scale:1.03;
+}
+
+.service-card h3 {
+  margin-bottom: 10px;
+}
+
+.service-card p {
+  font-size: 1rem;
+}
+
+/* About Section */
+.about {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.about-cards {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  font-size: 1.2em;
+}
+
+.about-card {
+  padding: 1em;
+  border-radius: 10px;
+  width: 40%;
+  transition: scale .8s ease-in-out, box-shadow .9s ease-out;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.about-card img{
+  height: 500px;
+  border-radius: 60px;
+  box-shadow: 0px 0px 20px #90c55e, ;
+}
+
+.about-card h3 {
+  margin-bottom: 10px;
+}
+
+/* Contact Section */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width:600px;
+  margin: 0 auto;
+}
+
+form input, form textarea, form select {
+  padding: 15px;
+  font-size: 1rem;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+}
+
+form button {
+  background-color: #00bcd4;
+  color: white;
+  padding: 15px;
+  font-size: 1.2rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+form button:hover {
+  background-color: #00838f;
+}
+
+/* Footer Section */
+footer {
+  background-color: #90c55e;
+  color: #fff;
+  text-align: center;
+  padding: 1.2em;
+}
+
+footer .social-links a {
+  margin: 0 10px;
+  color: #fff;
+  text-decoration: none;
+}
+
+footer p {
+  font-size: 0.9rem;
+  margin-top: 10px;
+}
+
+/* Portfolio HTML Page Styling Section */
+/* Portfolio Section */
+.portfolio {
+  padding: 10em 2em;
+  text-align: center;
+}
+
+.portfolio-cards {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  font-size: 1.2em;
+}
+
+.portfolio-card {
+  padding: 1em;
+  border-radius: 10px;
+  width: 30%;
+  transition: scale .8s ease-in-out, box-shadow .9s ease-out;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0px 0px 7px rgba(0, 0, 0, 0.219);
+}
+
+.portfolio-card img{
+  width: 50%;
+  border-radius: 5px;
+}
+.portfolio-card:hover{
+  box-shadow: 0px 0px 7px rgba(0, 0, 0, 0.219);
+  scale:1.03;
+}
+
+.portfolio-card h3 {
+  margin-bottom: 10px;
+}
+
+.portfolio-card p {
+  font-size: 1rem;
+}
+/* downloads HTML Page Styling Section */
+/* downloads Section */
+.downloads {
+  padding: 5em 2em;
+  text-align: center;
+}
+
+.downloads-cards {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  font-size: 1.2em;
+}
+
+.downloads-card {
+  padding: 1em;
+  border-radius: 10px;
+  width: 15%;
+  transition: scale .8s ease-in-out, box-shadow .9s ease-out;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0px 0px 7px rgba(0, 0, 0, 0.219);
+}
+
+.downloads-card img{
+  width: 50%;
+  border-radius: 5px;
+}
+.downloads-card:hover{
+  box-shadow: 0px 0px 7px rgba(0, 0, 0, 0.219);
+  scale:1.03;
+}
+
+.downloads-card h3 {
+  margin-bottom: 10px;
+}
+
+.downloads-card p {
+  font-size: 1rem;
+}
