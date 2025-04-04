@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", () => {
+/*document.addEventListener("DOMContentLoaded", () => {
     const contactForm = document.getElementById("contact-form");
     
     contactForm.addEventListener("submit", (e) => {
@@ -19,5 +19,17 @@ document.addEventListener("DOMContentLoaded", () => {
       // Reset the form after submission
       contactForm.reset();
     });
-  });
+  });*/
+
+
+  function openMenu(){
+    if (document.getElementById("navigationMenu").style.display == "block"){
+      document.getElementById("navigationMenu").style.display = "none";
+      document.getElementById("header").style.height = '10vh';
+    }else{
+      document.getElementById("navigationMenu").style.display = "block";
+      document.getElementById("header").style.height = '100vh';
+    }
+
+  }
   

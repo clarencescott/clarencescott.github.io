@@ -13,11 +13,11 @@
 </head>
 <body>
   <!-- Header Section -->
-  <header>
-    <div class="logo">
+  <header id="header">
+    <div class="logo" id="menuIcon" onclick="openMenu()">
       <img src="\files\BioGlytchLogo.png" alt="">
     </div>
-    <nav>
+    <nav id="navigationMenu">
       <ul>
         <li><a href="#">Home</a></li>
         <li><a href="#services">Services</a></li>
@@ -38,48 +38,62 @@
     </div>
   </section>
 
-  <!-- Services Section -->
-  <section id="services" class="section">
-    <div class="service-cards">
-      <div class="service-card">
-        <img src="files\web-dev-img.jpeg" alt="">
-        <h3>Web Development</h3>
-        <p>Responsive websites, custom web apps, and e-commerce solutions.</p>
-      </div>
-      <div class="service-card">
-        <img src="files\software-dev.jpg" alt="">
-        <h3>Software Development</h3>
-        <p>Custom C# applications for business automation, CRM, and more.</p>
-      </div>
-      <div class="service-card">
-        <img src="files\it-support.jpg" alt="">
-        <h3>IT Support</h3>
-        <p>Comprehensive IT support, help desk solutions, and remote assistance.</p>
-      </div>
+<!-- Services Section -->
+<section id="services" class="section">
+  <div class="service-cards">
+    <div class="service-card">
+      <img src="files/web-dev-img.jpeg" alt="">
+      <h3>Web Development</h3>
+      <p>Responsive websites, custom web apps, and e-commerce solutions.</p>
+      <ul class="pricing">
+        <li><strong>Starter:</strong> $600 - 1-Page Landing Site</li>
+        <li><strong>Pro:</strong> $1,200 - 3-5 Page Website + Contact Form</li>
+        <li><strong>Elite:</strong> $2,000 - Full Website + CMS or E-Commerce</li>
+      </ul>
     </div>
-  </section>
+    <div class="service-card">
+      <img src="files/software-dev.jpg" alt="">
+      <h3>Software Development</h3>
+      <p>Custom C# applications for business automation, CRM, and more.</p>
+      <ul class="pricing">
+        <li><strong>Basic:</strong> $800 - Desktop App w/ Core Features</li>
+        <li><strong>Advanced:</strong> $1,500 - CRM/Inventory System</li>
+        <li><strong>Enterprise:</strong> $2,500 - Full-Scale Custom Software</li>
+      </ul>
+    </div>
+    <div class="service-card">
+      <img src="files/it-support.jpg" alt="">
+      <h3>IT Support</h3>
+      <p>Comprehensive IT support, help desk solutions, and remote assistance.</p>
+      <ul class="pricing">
+        <li><strong>Hourly:</strong> $40/hr - On-Demand Support</li>
+        <li><strong>Monthly:</strong> $250/mo - Remote Support Package</li>
+        <li><strong>Business Pro:</strong> $600/mo - Full IT Management</li>
+      </ul>
+    </div>
+  </div>
+</section>
 
+
+  <hr >
   <!-- About Section -->
    <section id="about" class="about">
     <div class="about-cards">
       <div class="about-card">
-        <img src="files\headshot-cscott.jpg" alt="">
-      </div>
-      <div class="about-card">
-        <p>I'm Clarence Scott, a tech enthusiast, entrepreneur, and creative mind dedicated to bridging the gap between 
-          technology and the community. I run a nonprofit, S.T.E.E.L., where I teach coding, programming, and IT skills to 
+        <p>I'm BioGlytch, a tech enthusiast, entrepreneur, and creative mind dedicated to bridging the gap between 
+          technology and the community. I have organized a (still in process) nonprofit, <a href="http://">S.T.E.E.L.</a> , where I teach coding, programming, and IT skills to 
           empower people with career-ready knowledge. I provide IT solutions and develop digital tools for software engineers and developers. 
-          Passionate about innovation, I create educational workbooks, develop games like Techcadia, and produce content on coding and tech culture. 
-          I’m also building C1rcuitByt3, my own tech magazine. I’m always looking for ways to push the 
-          boundaries of technology and creativity while uplifting my community.</p>
+          Passionate about innovation, I create educational workbooks, develop games like <a href="http://">Techcadia</a> , and create social media content on coding and tech culture. 
+          I’m always looking for ways to push the boundaries of technology and creativity while uplifting my community.</p>
       </div>
     </div>
    </section>
+   <hr>
 
   <!-- Contact Section -->
   <section id="contact" class="section">
     <h2>Contact Us</h2>
-    <form id="contact-form">
+    <form action="https://formsubmit.co/6fcabe6734a3d13ce5426d54c19d39cd " method="post" id="contact-form">
       <input type="text" placeholder="Your Name" required>
       <input type="email" placeholder="Your Email" required>
       <textarea placeholder="Your Message" required></textarea>
@@ -103,9 +117,6 @@
     <p>&copy; 2025 Bio Glytch Studios</p>
   </footer>
 
-  <script src="scripts.js"></script>
+  <script src="/src/components/app.js"></script>
 </body>
 </html>
-
-
-eby.keelyn@student.oaklandcc.edu

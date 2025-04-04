@@ -10,96 +10,24 @@
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
   <title>Bio Glytch</title>
   <link rel="stylesheet" href="/src/components/styles.css">
+  <script src="/src/components/app.js" defer></script>
 </head>
 <style>
         .downloads{
           padding-top: 12em;
         }
-  
-        .loader-img{
-            height: 100vh;
-            width: 100%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            position: absolute;
-            background-color: white;
-        }
-        .loader-img h1{
-            font-size: 3em;
-            color: black;
-            height: 100vh;
-            width: 100%;
-            background-color: rgba(255, 255, 255, 0.829);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-shadow: 0px 0px 20px #bdff7f;
-            text-transform: uppercase;
-        }
-
-       
-        .fade-out{animation: fade-out linear forwards 8s}
-
-        @keyframes fade-out {
-            0%{opacity: 1; transform: translateX(0);}
-            50%{opacity: 0; }
-            75%{opacity: 0; }
-            100%{opacity: 0; transform: translateX(-2000px);}
-        }
-        .big-circle{
-            height: 200px;
-            width: 200px;
-            border-radius: 360px;
-            background-color: #bdff7f;
-        }
-        .rotating-bar{
-            height: 200px;
-            width: 60px;
-            background-color: black;
-            border-radius: 20px;
-            position: absolute;
-        }
-        .small-circle{
-            height: 190px;
-            width: 190px;
-            background-color: white;
-            position: absolute;
-            border-radius: 360px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-        .small-circle img{
-            height: inherit;
-        }
-
-        .rotating-bar{animation:rotate-bar linear infinite forwards 3s}
-
-        @keyframes rotate-bar {
-            0%{rotate: 180deg;}
-            100%{rotate: 0deg;}
-        }
-
 </style>
 <body>
-  <div class="loader-img fade-out">
-    <div class="big-circle"></div>
-    <div class="rotating-bar"></div>
-    <div class="small-circle">
-        <img src="/files/BioGlytchLogo.png" alt="">
-    </div>
-</div>
   <!-- Header Section -->
-  <header>
-    <div class="logo">
+  <header id="header">
+    <div class="logo" id="menuIcon" onclick="openMenu()">
       <img src="/files/BioGlytchLogo.png" alt="">
     </div>
-    <nav>
+    <nav  id="navigationMenu">
       <ul>
         <li><a href="/index.html">Home</a></li>
         <li><a href="/index.html#services">Services</a></li>
-        <li><a href="downloads.html">downloads</a></li>
+        <li><a href="portfolio.html">Portfolio</a></li>
         <li><a href="/index.html#contact">Contact</a></li>
         <li><a href="store.html">Downloads</a></li>
       </ul>
@@ -110,54 +38,59 @@
   <section id="downloads" class="downloads">
     <div class="downloads-cards">
       <div class="downloads-card">
-        <h3>V Scott Catering</h3>
-        <p>Responsive website for a catering business. If your looking for a modern catering service for an event or personal reasons, <a href="https://vscottcatering.com">V Scott Catering</a> is the place for you.</p>
+        <h3>C#: Basics To Advanced</h3>
+        <img src="/files/CSHARP_COVER.png" alt="">
+        <p>Whether you're aiming to enhance your career prospects or build innovative projects, this comprehensive guide is your gateway to mastering C#. </div>
+      <div class="downloads-card">
+        <h3>Computer Literacy - Using Your Device</h3>
+        <img src="/files/Computer Literacy.png" alt="">
+        <p>Throughout this book, I cover essential topics to help you understand and effectively use your computer.</p>
       </div>
       <div class="downloads-card">
-        <h3>S.T.E.E.L</h3>
-        <p>This company needed an innovative way to teach, guide and expand the world of engineering. Combining their teaching methods with resources available to all
-          <a href="https://s-t-e-e-l.vercel.app">STEEL</a> reached out to us to create their website.
-        </p>
-      </div>
-      <div class="downloads-card">
-        <h3>Tax Support & Business Literacy</h3>
-        <p>Comprehensive Tax & Business support. This company provides assistance that guides you through the whole process allowing you to scale and grow your persoanl and business finances to higher altitudes.</p>
+        <h3>Web Development - Full Guide</h3>
+        <img src="/files/web-dev-img.jpeg" alt="">
+        <p>Here you get the combination of JavaScript and Building Flexible websites guide.</p>
       </div>
     </div>
     <br>
     <div class="downloads-cards">
       <div class="downloads-card">
-        <h3>Bio Glytch Tool</h3>
-        <p>Downloadable tool, created by to provide live HelpDesk Solutions. If not live almost instant! <a href="#">Download</a> it now and signup for my helpdesk support list.</p>
+        <h3>HTML5 Fundamentals</h3>
+        <img src="/files/HTML_Fundamentals.png" alt="">
+        <p>You will learn about HTML: elements, forms, headings, comments and many more. This book is also beautifully paired with my CSS book! </p>
       </div>
       <div class="downloads-card">
-        <h3>Flagrant Optimization</h3>
-        <p>This company provides innovative simple and effective IT Solutions, <a href="#">Flagrant Optimizations</a>.
-        </p>
+        <h3>Cascading Stylesheet (CSS) Fundamentals</h3>
+        <img src="/files/CSS_Fundamentals.png" alt="">
+        <p>The CSS journey covers everything from the box model to background styling, list styling, link styling, table styling, form styling, layout styling, positioning styling, transforms, transitions, and animations.</p>
       </div>
       <div class="downloads-card">
-        <h3>Personal Investment downloads Application</h3>
-        <p>Comprehensive investment downloads application. This application allows you to track your current investments natively and privately to ensure you have maximum security protecting your finances. It does not hold digital currency, more for physical cash flow management.</p>
+        <h3>JavaScript Fundamentals</h3>
+        <img src="/files/JavaScript_Fundamentals.png" alt="">
+        <p>By the end of this book, you should be have a solid foundation in JavaScript, to build interactive
+          and dynamic web pages. The book is to provided theoretical understanding and practical skills through
+          hands on exercises and a mini project. </p>
       </div>
     </div>
   </section>
+  <a href="https://bioglytch.gumroad.com/?_gl=1*dkse2z*_ga*MTg2MzYwMzM2My4xNzM1OTM3ODQ5*_ga_6LJN6D94N6*MTc0Mzc2NDY5Mi40LjEuMTc0Mzc2NTYwNC4wLjAuMA..">Check out more downloads and books here!</a>
 
-  <!-- Contact Section -->
-  <section id="contact" class="section">
-    <h2>Contact Us</h2>
-    <form id="contact-form">
-      <input type="text" placeholder="Your Name" required>
-      <input type="email" placeholder="Your Email" required>
-      <textarea placeholder="Your Message" required></textarea>
-      <select name="service" required>
-        <option value="" disabled selected>Select a Service</option>
-        <option value="web-development">Web Development</option>
-        <option value="software-development">Software Development</option>
-        <option value="it-support">IT Support</option>
-      </select>
-      <button type="submit" class="cta-button">Send Message</button>
-    </form>
-  </section>
+<!-- Contact Section -->
+<section id="contact" class="section">
+  <h2>Contact Us</h2>
+  <form action="https://formsubmit.co/6fcabe6734a3d13ce5426d54c19d39cd " method="post" id="contact-form">
+    <input type="text" placeholder="Your Name" required>
+    <input type="email" placeholder="Your Email" required>
+    <textarea placeholder="Your Message" required></textarea>
+    <select name="service" required>
+      <option value="" disabled selected>Select a Service</option>
+      <option value="web-development">Web Development</option>
+      <option value="software-development">Software Development</option>
+      <option value="it-support">IT Support</option>
+    </select>
+    <button type="submit" class="cta-button">Send Message</button>
+  </form>
+</section>
 
   <!-- Footer Section -->
   <footer>
@@ -169,6 +102,6 @@
     <p>&copy; 2025 Bio Glytch Studios</p>
   </footer>
 
-  <script src="scripts.js"></script>
+  
 </body>
 </html>
