@@ -60,7 +60,7 @@ nav ul li a:hover{
 /* Hero Section */
 .hero {
   height: 90vh;
-  background:url(/files/header-bg.webp);
+  background:url(/resources/header-bg.webp);
   background-position: center;
   background-size: cover;
   display: flex;
