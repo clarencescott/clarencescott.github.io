@@ -8,209 +8,91 @@
   <title>Flint Code Lab</title>
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&family=Roboto&display=swap" rel="stylesheet">
 <style>
-      body {
+  body {
     margin: 0;
     font-family: 'Roboto', sans-serif;
-    background: linear-gradient(135deg, #e0fcff, #ffffff);
+    background: linear-gradient(135deg, #fff3e0, #ffffff);
     color: #222;
   }
-
   header {
     background: #ffffff;
     text-align: center;
-    padding: 2rem 1rem;
-    border-bottom: 4px solid #00ffe7;
+    padding: .5rem 0rem;
+    border-bottom: 4px solid rgb(255, 166, 0);
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
   }
-
   header h1 {
     font-family: 'Orbitron', sans-serif;
     font-size: 2.5rem;
-    color: #00bfa6;
+    color: #f8a50a;
   }
-
   header p {
     color: #555;
     font-size: 1.1rem;
   }
-
   section {
     max-width: 1400px;
     margin: auto;
     padding: 2rem 1rem;
   }
-
   .card {
     background: #fff;
     padding: 2rem;
     margin-bottom: 2rem;
-    border-left: 5px solid #00ffe7;
+    border-left: 5px solid rgb(0, 247, 255);
     border-radius: 12px;
     box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
   }
-
   h2 {
-    color: #00bfa6;
+    color: #ff9d09;
     font-family: 'Orbitron', sans-serif;
     margin-bottom: 0.5rem;
   }
-
   p, li {
     color: #333;
     line-height: 1.6;
   }
-
-  ul {
-    padding-left: 1.5rem;
-  }
-
   .btn {
-    background: #00ffe7;
+    background: rgb(255, 136, 0);
     color: #111;
     padding: 0.75rem 1.5rem;
     text-decoration: none;
     border-radius: 10px;
     font-weight: bold;
-    margin-top: 1rem;
     transition: all 0.3s ease;
-    box-shadow: 0 4px 10px rgba(0, 255, 231, 0.4);
+    box-shadow: 0 4px 10px rgba(255, 0, 0, 0.4);
   }
-
   .btn:hover {
-    background: #00cbbf;
+    background: #ffbc57;
     transform: scale(1.05);
   }
-
-  .modal {
-    display: none;
-    position: fixed;
-    z-index: 999;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(240, 248, 255, 0.95);
-    justify-content: center;
-    align-items: center;
-  }
-
-  .modal-content {
-    background: #ffffff;
-    padding: 2rem;
-    border-radius: 10px;
-    border: 2px solid #00ffe7;
-    max-width: 500px;
-    width: 90%;
-    color: #222;
-    box-shadow: 0 0 20px rgba(0, 255, 231, 0.2);
-    text-align: center;
-  }
-
-  .close {
-    float: right;
-    font-size: 1.5rem;
-    cursor: pointer;
-    color: #00bfa6;
-  }
-
   footer {
     text-align: center;
     padding: 2rem 1rem;
     background: #f7f7f7;
     color: #666;
-    border-top: 2px solid #00ffe7;
+    border-top: 2px solid rgb(0, 247, 255);
   }
 
-  /*********************
-  MODAL STYLING SECTIONS
-  *********************/
-
-/* Modal Overlay */
-.modal {
-  display: none;
-  position: fixed;
-  z-index: 9999;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  overflow-y: auto;
-  background-color: rgba(0, 0, 0, 0.7);
-  justify-content: center;
-  align-items: center;
-  padding: 2rem;
-}
-
-/* Modal Box */
-.modal-content {
-  background-color: #ffffff;
-  border: 3px solid #00ffe7;
-  border-radius: 10px;
-  padding: 2rem;
-  width: 100%;
-  max-width: 500px;
-  box-shadow: 0 0 20px rgba(0, 255, 231, 0.4);
-  font-family: 'Roboto', sans-serif;
-  position: relative;
-}
-
-/* Close Button */
-.modal-content .close {
-  position: absolute;
-  top: 1rem;
-  right: 1.2rem;
-  font-size: 1.5rem;
-  cursor: pointer;
-  color: #00bfa6;
-}
-
-/* Form Styling */
-.modal-content form {
-  display: flex;
-  flex-direction: column;
+  .gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 1rem;
+  margin: 2rem 0;
 }
 
-.modal-content label {
-  font-weight: bold;
-  color: #00bfa6;
+.gallery img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.modal-content input,
-.modal-content select,
-.modal-content textarea {
-  padding: 0.75rem;
-  border: 1px solid #ccc;
-  border-radius: 6px;
-  font-size: 1rem;
-  font-family: 'Roboto', sans-serif;
-}
-
-.modal-content .btn {
-  background-color: #00bfa6;
-  color: white;
-  border: none;
-  padding: 0.75rem;
-  border-radius: 6px;
-  font-size: 1rem;
-  cursor: pointer;
-  transition: background 0.3s;
-}
-
-.modal-content .btn:hover {
-  background-color: #009e8a;
-}
-
-
-.close {
-  color: #aaa;
-  float: right;
-  font-size: 28px;
-  font-weight: bold;
-  cursor: pointer;
-}
-.close:hover {
-  color: #fff;
+.gallery img:hover {
+  transform: scale(1.03);
+  box-shadow: 0 8px 24px rgba(255, 145, 0, 0.3);
 }
 
 </style>
@@ -219,163 +101,107 @@
 
   <header>
     <h1>Flint Code Lab</h1>
-    <p>Private Coding Classes for Kids, Teens & Adults</p>
+    <img src="/resources/Flint Code Lab Logo.png" height="60" alt=""><br>
     <a href="http://clarencescott.github.io/">Home</a>
   </header>
 
   <section>
     <div class="card">
-      <h2>🧠 About the Classes</h2>
-      <p>We offer small-group, hands-on coding sessions. Learn web design, game creation, Python, Java, and cybersecurity in a way that’s fun and accessible for all ages.</p>
-      <section>
-  <div class="card">
-    <h2>📅 Class Schedule</h2>
-    <p>Our seasonal offerings provide a structured and fun way to build technical skills. Check out our upcoming classes below:</p>
-    <div style="overflow-x:auto;">
-      <table style="width:100%; border-collapse: collapse; margin-top: 1rem;">
+      <h2>💻 Learn Coding With Clarence! – July 2025 Tech Classes</h2>
+      <p>Build Real Skills | No Experience Needed | Ages 12+ Welcome</p>
+      <p>💥 All classes are beginner-friendly and taught LIVE! Sign up today to reserve your spot.</p>
+      <p>If you purchase a device <a href="storecatalog.html">(here)</a> get 2 classes free! REGISTER TODAY!</p>
+    </div>
+
+    <div class="card">
+      <h2>📅 Weekly Class Schedule</h2>
+      <p style="font-style: italic; font-weight: bolder;">Place a call to consult for registering in all classes. We recommend only 2 at a time.</p>
+      <table style="width:100%; border-collapse: collapse; margin-top: 1rem; margin-bottom: 2em;">
         <thead>
-          <tr style="background-color: #00ffe710; color: #00bfa6;">
-            <th style="text-align: left; padding: 0.75rem; border-bottom: 2px solid #00ffe7;">Class</th>
-            <th style="text-align: left; padding: 0.75rem; border-bottom: 2px solid #00ffe7;">Start Date</th>
-            <th style="text-align: left; padding: 0.75rem; border-bottom: 2px solid #00ffe7;">End Date</th>
+          <tr style="background-color: rgb(78, 78, 78); color: rgb(255, 174, 0);">
+            <th style="padding: 0.75rem; border-bottom: 2px solid rgb(255, 174, 0);">Day</th>
+            <th style="padding: 0.75rem; border-bottom: 2px solid rgb(255, 174, 0);">Time</th>
+            <th style="padding: 0.75rem; border-bottom: 2px solid rgb(255, 174, 0);">Class</th>
+            <th style="padding: 0.75rem; border-bottom: 2px solid rgb(255, 174, 0);">Price</th>
           </tr>
         </thead>
         <tbody>
           <tr>
-            <td style="padding: 0.75rem; border-bottom: 1px solid #eee;">Beginner HTML, CSS, JavaScript</td>
-            <td style="padding: 0.75rem; border-bottom: 1px solid #eee;">Jun 16, 2025</td>
-            <td style="padding: 0.75rem; border-bottom: 1px solid #eee;">Jul 11, 2025</td>
+            <td style="padding: 0.75rem; border-bottom: 1px solid #eee;">Monday</td>
+            <td style="padding: 0.75rem; border-bottom: 1px solid #eee;">5:00 PM - 6:30PM</td>
+            <td style="padding: 0.75rem; border-bottom: 1px solid #eee;">HTML & CSS for Beginners</td>
+            <td style="padding: 0.75rem; border-bottom: 1px solid #eee;">$100 (4 weeks)</td>
           </tr>
           <tr>
-            <td style="padding: 0.75rem; border-bottom: 1px solid #eee;">Python (kids)</td>
-            <td style="padding: 0.75rem; border-bottom: 1px solid #eee;">Jul 14, 2025</td>
-            <td style="padding: 0.75rem; border-bottom: 1px solid #eee;">Aug 8, 2025</td>
+            <td style="padding: 0.75rem; border-bottom: 1px solid #eee;">Tuesday</td>
+            <td style="padding: 0.75rem; border-bottom: 1px solid #eee;">5:00 PM - 6:30PM</td>
+            <td style="padding: 0.75rem; border-bottom: 1px solid #eee;">Python Programming Basics</td>
+            <td style="padding: 0.75rem; border-bottom: 1px solid #eee;">$100 (4 weeks)</td>
           </tr>
           <tr>
-            <td style="padding: 0.75rem; border-bottom: 1px solid #eee;">Game Dev with Roblox Studio</td>
-            <td style="padding: 0.75rem; border-bottom: 1px solid #eee;">Aug 11, 2025</td>
-            <td style="padding: 0.75rem; border-bottom: 1px solid #eee;">Sep 5, 2025</td>
+            <td style="padding: 0.75rem; border-bottom: 1px solid #eee;">Wednesday</td>
+            <td style="padding: 0.75rem; border-bottom: 1px solid #eee;">5:00 PM - 6:30PM</td>
+            <td style="padding: 0.75rem; border-bottom: 1px solid #eee;">Cybersecurity for Beginners</td>
+            <td style="padding: 0.75rem; border-bottom: 1px solid #eee;">$100 (4 weeks)</td>
           </tr>
           <tr>
-            <td style="padding: 0.75rem; border-bottom: 1px solid #eee;">Web & App Development</td>
-            <td style="padding: 0.75rem; border-bottom: 1px solid #eee;">Sep 8, 2025</td>
-            <td style="padding: 0.75rem; border-bottom: 1px solid #eee;">Oct 3, 2025</td>
-          </tr>
-          <tr>
-            <td style="padding: 0.75rem; border-bottom: 1px solid #eee;">Cybersecurity Basics</td>
-            <td style="padding: 0.75rem; border-bottom: 1px solid #eee;">Oct 6, 2025</td>
-            <td style="padding: 0.75rem; border-bottom: 1px solid #eee;">Oct 31, 2025</td>
-          </tr>
-          <tr>
-            <td style="padding: 0.75rem; border-bottom: 1px solid #eee;">Java (teens/adults)</td>
-            <td style="padding: 0.75rem; border-bottom: 1px solid #eee;">Nov 3, 2025</td>
-            <td style="padding: 0.75rem; border-bottom: 1px solid #eee;">Nov 28, 2025</td>
-          </tr>
-          <tr>
-            <td style="padding: 0.75rem;">Game Dev with Unity</td>
-            <td style="padding: 0.75rem;">Dec 1, 2025</td>
-            <td style="padding: 0.75rem;">Dec 26, 2025</td>
+            <td style="padding: 0.75rem;">Saturday</td>
+            <td style="padding: 0.75rem;">12:00 NOON – 2:00 PM</td>
+            <td style="padding: 0.75rem;">Weekend Web Development Bootcamp</td>
+            <td style="padding: 0.75rem;">$250 (4 weeks)</td>
           </tr>
         </tbody>
       </table>
-    </div>
-    <a href="#" class="btn" onclick="openModal()">Register Now</a>
+     <div >
+  <div style="padding: 20px;">
+    <a target="_blank" href="https://square.link/u/0hkOIbQZ?src=embed" style="
+    display: inline-block;
+    font-size: 18px;
+    line-height: 48px;
+    height: 48px;
+    color: #ffffff;
+    min-width: 212px;
+    background-color: #ff7b00;
+    text-align: center;
+    box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.644) inset;
+    border-radius: 6px;
+  ">Buy now</a>
   </div>
-</section>
+</div>
+</div>
 
+    <div class="card">
+      <h2>💸 Payment Options</h2>
+      <p><strong>Weekly Pay:</strong> $25 at the beginning of each week</p>
+      <p><strong>Full Class Prepay:</strong> $100 upfront for monthly classes</p>
+      <p><strong>Bootcamp Pay:</strong> $250 full payment at first session or $125 at weeks 1 and 3</p>
+      <p>Accepted via Cash App, Square, or cash in person.</p>
     </div>
 
     <div class="card">
-      <h2>📆 Schedule</h2>
-      <p><strong>Days:</strong> Monday, Wednesday, Friday</p>
-      <p><strong>Time:</strong> 6:30PM-7:30PM</p>
-    </div>
-
-    <div class="card">
-      <h2>💸 Pricing Breakdown</h2>
-      <ul>
-        <li><strong>Weekly:</strong> $40</li>
-        <li><strong>Monthly (Prepay):</strong> $160</li>
-        <li><em>Includes 3 sessions per week – about $13.33/class!</em></li>
-      </ul>
-      <p>This pricing ensures affordability while providing high-quality education in tech fields.</p>
-    </div>
-
-    <div class="card">
-      <h2>📅 Book Your Spot</h2>
-      <p>Click the button below to check session availability and request your personalized schedule.</p>
-      <a class="btn" href="#" onclick="openModal()">Book Now</a>
-    </div>
-
-    <!--<div class="modal" id="bookingModal">
-      <div class="modal-content">
-        <span class="close" onclick="closeModal()">&times;</span>
-        <h2>Book Your Class</h2>
-        <p>Please email <a href="mailto:support@clarencescott.tech">support@clarencescott.tech</a> or text/call <strong>810-241-8724</strong> to reserve your class time.</p>
-        <p>We’ll respond within 24 hours to confirm your session slot.</p>
+      <h2>📸 Gallery</h2>
+      <div class="gallery">
+        <h1>2025 Images Coming SOON!</h1>
+        <!--<img src="/resources/class1.jpg" alt="Student coding in class">-->
+        <!--<img src="/resources/class2.jpg" alt="Instructor teaching HTML">-->
+        <!--<img src="/resources/class3.jpg" alt="Students building websites">-->
+        <!--<img src="/resources/class4.jpg" alt="Python programming class">-->
       </div>
-    </div>-->
-
-    <div class="card">
-      <h2>💳 Payment Options</h2>
-      <p><strong>In-Person Weekly:</strong> Pay $40 at the beginning of each week</p>
-      <p><strong>Full Class Prepay:</strong> $160 upfront for the month</p>
-      <p>Payment accepted via cash, Cash App, or Square at first session.</p>
     </div>
+
 
     <div class="card">
       <h2>📞 Contact</h2>
-      <p>Email: <a href="mailto:support@clarencescott.tech">support@clarencescott.tech</a></p>
-      <p>Phone: <a href="tel:8102418724">810-241-8724</a></p>
-      <p>Serving Flint, MI and nearby communities (within 15 miles)</p>
+      <p>Email: <a href="mailto:scottclarence5@gmail.com">Bio Glytch Email</a></p>
+      <p>Phone: <a href="tel:+18102418724">Bio Glytch Cell</a></p>
+      <p>Classes held in The New McCree Theatre at 4601 Clio Rd Flint, MI 48504. Virtual sessions by request only.</p>
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2915.296954228498!2d-83.73641902333212!3d43.05622167113679!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x882383117b29099f%3A0xc01c5356335ca086!2s4601%20Clio%20Rd%2C%20Flint%2C%20MI%2048504!5e0!3m2!1sen!2sus!4v1751827439518!5m2!1sen!2sus" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
     </div>
   </section>
 
   <footer>
-    <p>&copy; 2025 Flint Code Lab • Built by Clarence Scott • clarencescott.tech</p>
+    <p>&copy; 2025 Flint Code Lab • Built by Clarence Scott • clarencescott.github.io</p>
   </footer>
 
-<!--- HTML Modal Sections of Code-->
-<div class="modal" id="bookingModal">
-  <div class="modal-content">
-    <span class="close" onclick="closeModal()">&times;</span>
-    <h2>Register for a Class</h2>
-    <form id="registrationForm">
-      <label for="name">Full Name</label>
-      <input type="text" id="name" name="name" required>
-
-      <label for="email">Email Address</label>
-      <input type="email" id="email" name="email" required>
-
-      <label for="classSelect">Select Class</label>
-      <select id="classSelect" name="class" required>
-        <option value="">-- Please choose a class --</option>
-        <option value="html-css-js">Beginner HTML, CSS, JS – Jun 16–Jul 11, 2025</option>
-        <option value="python-kids">Python (kids) – Jul 14–Aug 8, 2025</option>
-        <option value="roblox">Game Dev w/ Roblox Studio – Aug 11–Sep 5, 2025</option>
-        <option value="web-app">Web & App Dev – Sep 8–Oct 3, 2025</option>
-        <option value="cybersecurity">Cybersecurity Basics – Oct 6–Oct 31, 2025</option>
-        <option value="java">Java (teens/adults) – Nov 3–Nov 28, 2025</option>
-        <option value="unity">Game Dev w/ Unity – Dec 1–Dec 26, 2025</option>
-      </select>
-
-      <label for="message">Message or Notes (Optional)</label>
-      <textarea id="message" name="message" rows="3" placeholder="Tell us anything helpful..."></textarea>
-
-      <button type="submit" class="btn">Submit Registration</button>
-    </form>
-  </div>
-</div>
-
-
-
-  <script>
-    function openModal() {
-      document.getElementById('bookingModal').style.display = 'flex';
-    }
-    function closeModal() {
-      document.getElementById('bookingModal').style.display = 'none';
-    }
-  </script>
 </body>
 </html>
