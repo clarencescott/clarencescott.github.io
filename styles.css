@@ -328,6 +328,27 @@ body {
     padding: 20px;
     font-family: var(--font-mono);
     min-height: 200px;
+    max-height: 300px;
+    overflow-y: auto;
+}
+
+.terminal-body::-webkit-scrollbar {
+    width: 8px;
+}
+
+.terminal-body::-webkit-scrollbar-track {
+    background: var(--background-secondary);
+    border-radius: 4px;
+}
+
+.terminal-body::-webkit-scrollbar-thumb {
+    background: var(--primary-color);
+    border-radius: 4px;
+    opacity: 0.3;
+}
+
+.terminal-body::-webkit-scrollbar-thumb:hover {
+    opacity: 0.7;
 }
 
 .terminal-line {
@@ -989,6 +1010,23 @@ section {
         width: 200px;
         justify-content: center;
     }
+
+    .terminal-window {
+        margin-top: 30px;
+        width: 100%;
+        max-width: none;
+    }
+
+    .terminal-body {
+        min-height: 150px;
+        max-height: 200px;
+        font-size: 0.85rem;
+        padding: 15px;
+    }
+
+    .terminal-title {
+        font-size: 0.8rem;
+    }
 }
 
 @media (max-width: 480px) {
@@ -1006,6 +1044,27 @@ section {
 
     .skills-grid {
         grid-template-columns: 1fr;
+    }
+
+    .terminal-body {
+        min-height: 120px;
+        max-height: 160px;
+        font-size: 0.8rem;
+        padding: 12px;
+        line-height: 1.4;
+    }
+
+    .terminal-header {
+        padding: 12px 15px;
+    }
+
+    .terminal-title {
+        font-size: 0.75rem;
+    }
+
+    .control {
+        width: 10px;
+        height: 10px;
     }
 }
 
