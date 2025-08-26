@@ -122,8 +122,10 @@
     }
   ],
   "functions": {
-    "app/**": {
-      "runtime": "@vercel/node@2"
+    "api/**/*.js": {
+      "memory": 512,
+      "maxDuration": 10
     }
   }
 }
+
