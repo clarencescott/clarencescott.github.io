@@ -654,7 +654,9 @@ section {
 }
 
 .experience-list li::before {
-    content: '▶';
+    content: '\f121';
+    font-family: 'Font Awesome 6 Free';
+    font-weight: 900;
     position: absolute;
     left: 0;
     color: var(--primary-color);
