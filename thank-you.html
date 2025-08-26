@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Security Headers -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdnjs.cloudflare.com; font-src 'self' https://fonts.gstatic.com https://cdnjs.cloudflare.com; img-src 'self' data:;">
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    <meta http-equiv="X-Frame-Options" content="DENY">
+    <meta http-equiv="X-XSS-Protection" content="1; mode=block">
+    
+    <title>Thank You - Clarence Scott</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <span class="logo-bracket">[</span>
+                <span class="logo-text">ClarenceScott</span>
+                <span class="logo-bracket">]</span>
+            </div>
+            <div class="nav-menu">
+                <a href="index.html#home" class="nav-link">home</a>
+                <a href="index.html#about" class="nav-link">about</a>
+                <a href="index.html#experience" class="nav-link">experience</a>
+                <a href="index.html#projects" class="nav-link">projects</a>
+                <a href="index.html#contact" class="nav-link">contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Thank You Section -->
+    <section class="thank-you-section">
+        <div class="matrix-background"></div>
+        <div class="container">
+            <div class="thank-you-content">
+                <div class="terminal-window">
+                    <div class="terminal-header">
+                        <div class="terminal-controls">
+                            <span class="control close"></span>
+                            <span class="control minimize"></span>
+                            <span class="control maximize"></span>
+                        </div>
+                        <div class="terminal-title">clarence@bioglytchstudios:~$</div>
+                    </div>
+                    <div class="terminal-body">
+                        <div class="terminal-line">
+                            <span class="prompt">clarence@bioglytchstudios:~$</span>
+                            <span class="command">echo "Message received successfully!"</span>
+                        </div>
+                        <div class="terminal-output">
+                            <div class="success-message">
+                                <i class="fas fa-check-circle"></i>
+                                <h1>Thank You!</h1>
+                                <p>Your message has been successfully sent. I'll get back to you as soon as possible.</p>
+                                
+                                <div class="message-info">
+                                    <p><i class="fas fa-clock"></i> Typical response time: 24-48 hours</p>
+                                    <p><i class="fas fa-envelope"></i> You should receive a confirmation email shortly</p>
+                                </div>
+                                
+                                <div class="action-buttons">
+                                    <a href="index.html" class="btn btn-primary">
+                                        <i class="fas fa-home"></i> Return Home
+                                    </a>
+                                    <a href="index.html#projects" class="btn btn-secondary">
+                                        <i class="fas fa-code"></i> View Projects
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p>&copy; 2025 Clarence Scott. Built with passion and lots of coffee.</p>
+                <p class="footer-tech">Designed & Developed by Clarence Scott</p>
+            </div>
+        </div>
+    </footer>
+
+    <style>
+        .thank-you-section {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            position: relative;
+            padding-top: 100px;
+        }
+
+        .thank-you-content {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 60vh;
+        }
+
+        .success-message {
+            text-align: center;
+            color: var(--text-primary);
+        }
+
+        .success-message i.fa-check-circle {
+            font-size: 4rem;
+            color: var(--primary-color);
+            margin-bottom: 20px;
+            text-shadow: 0 0 20px rgba(0, 255, 65, 0.5);
+        }
+
+        .success-message h1 {
+            font-size: 2.5rem;
+            font-family: var(--font-mono);
+            color: var(--primary-color);
+            margin-bottom: 20px;
+        }
+
+        .success-message p {
+            font-size: 1.1rem;
+            color: var(--text-secondary);
+            margin-bottom: 30px;
+            line-height: 1.6;
+        }
+
+        .message-info {
+            background-color: rgba(0, 255, 65, 0.05);
+            border: 1px solid rgba(0, 255, 65, 0.2);
+            border-radius: 8px;
+            padding: 20px;
+            margin: 30px 0;
+        }
+
+        .message-info p {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 10px;
+            font-family: var(--font-mono);
+            font-size: 0.9rem;
+        }
+
+        .message-info p:last-child {
+            margin-bottom: 0;
+        }
+
+        .message-info i {
+            color: var(--primary-color);
+        }
+
+        .action-buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            margin-top: 30px;
+        }
+
+        @media (max-width: 768px) {
+            .action-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .success-message h1 {
+                font-size: 2rem;
+            }
+            
+            .terminal-window {
+                max-width: 90vw;
+            }
+        }
+    </style>
+
+    <script>
+        // Auto-redirect after 30 seconds
+        setTimeout(() => {
+            window.location.href = 'index.html';
+        }, 30000);
+
+        // Matrix background effect
+        function createMatrixBackground() {
+            const canvas = document.createElement('canvas');
+            const ctx = canvas.getContext('2d');
+            const matrixContainer = document.querySelector('.matrix-background');
+            
+            canvas.style.position = 'absolute';
+            canvas.style.top = '0';
+            canvas.style.left = '0';
+            canvas.style.width = '100%';
+            canvas.style.height = '100%';
+            canvas.style.pointerEvents = 'none';
+            
+            matrixContainer.appendChild(canvas);
+            
+            function resizeCanvas() {
+                canvas.width = window.innerWidth;
+                canvas.height = window.innerHeight;
+            }
+            
+            resizeCanvas();
+            window.addEventListener('resize', resizeCanvas);
+            
+            const chars = '01';
+            const fontSize = 14;
+            const columns = canvas.width / fontSize;
+            const drops = [];
+            
+            for (let i = 0; i < columns; i++) {
+                drops[i] = 1;
+            }
+            
+            function draw() {
+                ctx.fillStyle = 'rgba(13, 17, 23, 0.05)';
+                ctx.fillRect(0, 0, canvas.width, canvas.height);
+                
+                ctx.fillStyle = 'rgba(0, 255, 65, 0.3)';
+                ctx.font = `${fontSize}px monospace`;
+                
+                for (let i = 0; i < drops.length; i++) {
+                    const text = chars[Math.floor(Math.random() * chars.length)];
+                    ctx.fillText(text, i * fontSize, drops[i] * fontSize);
+                    
+                    if (drops[i] * fontSize > canvas.height && Math.random() > 0.975) {
+                        drops[i] = 0;
+                    }
+                    drops[i]++;
+                }
+            }
+            
+            setInterval(draw, 50);
+        }
+
+        document.addEventListener('DOMContentLoaded', createMatrixBackground);
+    </script>
+</body>
+</html>
