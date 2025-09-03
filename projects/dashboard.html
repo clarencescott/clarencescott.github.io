@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tire Tread Dashboard</title>
+  <link rel="stylesheet" href="static/style.css">
+</head>
+<style>
+  body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  margin: 0;
+  color: #222;
+}
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem 3rem 1rem 3rem;
+  background: rgba(255,255,255,0.7);
+  box-shadow: 0 4px 16px rgba(0,0,0,0.04);
+  border-bottom: 1px solid #e0e0e0;
+}
+.logo {
+  font-size: 2.2rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: #3a86ff;
+}
+.icon-btn {
+  background: #fff;
+  border: none;
+  font-size: 1.5rem;
+  border-radius: 50%;
+  box-shadow: 0 2px 8px rgba(58,134,255,0.08);
+  cursor: pointer;
+  transition: box-shadow 0.2s;
+}
+.icon-btn:hover {
+  box-shadow: 0 4px 16px rgba(58,134,255,0.18);
+}
+.container {
+  display: flex;
+  min-height: 80vh;
+}
+.sidebar {
+  width: 220px;
+  background: rgba(255,255,255,0.6);
+  box-shadow: 0 2px 12px rgba(58,134,255,0.07);
+  border-radius: 24px;
+  margin: 2rem 1rem 2rem 2rem;
+  padding: 2rem 1rem;
+  display: flex;
+  flex-direction: column;
+}
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.nav-link {
+  display: block;
+  padding: 1rem 1.5rem;
+  margin-bottom: 0.5rem;
+  border-radius: 12px;
+  color: #222;
+  text-decoration: none;
+  font-weight: 500;
+  transition: background 0.2s, color 0.2s;
+}
+.nav-link.active, .nav-link:hover {
+  background: #3a86ff;
+  color: #fff;
+}
+.main-panel {
+  flex: 1;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 2rem;
+  margin: 2rem;
+}
+.card {
+  background: rgba(255,255,255,0.8);
+  border-radius: 24px;
+  box-shadow: 0 4px 24px rgba(58,134,255,0.10);
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  min-height: 220px;
+}
+.chart-placeholder {
+  height: 120px;
+  background: linear-gradient(90deg, #e0e7ff 0%, #fff 100%);
+  border-radius: 16px;
+  margin-top: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #888;
+  font-size: 1.1rem;
+}
+.log-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+}
+.log-table th, .log-table td {
+  padding: 0.7rem 1rem;
+  border-bottom: 1px solid #e0e0e0;
+  text-align: left;
+}
+.log-table th {
+  background: #f0f4ff;
+  color: #3a86ff;
+}
+.alert-summary {
+  margin-top: 1rem;
+  color: #e63946;
+  font-weight: 600;
+}
+.footer {
+  background: rgba(255,255,255,0.7);
+  border-top: 1px solid #e0e0e0;
+  padding: 1.5rem 3rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1rem;
+  box-shadow: 0 -2px 12px rgba(58,134,255,0.07);
+}
+.export-btn {
+  background: #3a86ff;
+  color: #fff;
+  border: none;
+  border-radius: 12px;
+  padding: 0.7rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(58,134,255,0.08);
+  transition: background 0.2s;
+}
+.export-btn:hover {
+  background: #2656b6;
+}
+@media (max-width: 900px) {
+  .main-panel {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4, 1fr);
+  }
+  .sidebar {
+    width: 100px;
+    padding: 1rem 0.5rem;
+  }
+}
+
+</style>
+<body>
+  <header class="header">
+    <h1 class="logo">TTDS</h1>
+    <button id="settings" class="icon-btn" aria-label="Settings">⚙️</button>
+  </header>
+
+  <div class="container">
+    <nav class="sidebar">
+      <ul>
+        <li><a href="#live" class="nav-link active">Live Data</a></li>
+        <li><a href="#logs" class="nav-link">Logs</a></li>
+        <li><a href="#alerts" class="nav-link">Alerts</a></li>
+        <li><a href="#system" class="nav-link">System Info</a></li>
+      </ul>
+    </nav>
+
+    <main class="main-panel">
+      <section id="live" class="card">
+  <h2>Live Tread Depth</h2>
+  <div id="live-chart" class="chart-placeholder">Chart goes here</div>
+  <!-- Simulation Controls will be injected here by JS -->
+      </section>
+
+      <section id="logs" class="card">
+        <h2>Log Viewer</h2>
+        <table id="log-table" class="log-table">
+          <thead><tr><th>Time</th><th>Event</th><th>Details</th></tr></thead>
+          <tbody></tbody>
+        </table>
+      </section>
+
+      <section id="alerts" class="card">
+        <h2>Alerts</h2>
+        <div id="alert-summary" class="alert-summary">No alerts</div>
+      </section>
+
+      <section id="system" class="card">
+        <h2>System Status</h2>
+        <p>Uptime: <span id="uptime">--</span></p>
+        <p>Sensor Status: <span id="sensor-status">--</span></p>
+      </section>
+    </main>
+  </div>
+
+  <footer class="footer">
+    <p>Last updated: <span id="last-updated">--</span></p>
+    <button class="export-btn" onclick="exportLogs()">Save Log</button>
+  </footer>
+
+  <script >
+
+// Initial simulation values
+let treadDepth = 8.0; // starting tread depth in mm
+let distance = 0; // starting distance in km
+let logs = []; // stores log entries
+let alerts = []; // stores alert messages
+let simulationInterval = null; // holds interval for simulation steps
+let simTimer = 0; // tracks elapsed simulation time in seconds
+let simTimerInterval = null; // holds interval for timer updates
+
+// Updates the live chart display with current tread and distance
+function updateChart() {
+  const chart = document.getElementById('live-chart');
+  chart.innerHTML = `<div>Tread Depth: <span id="tread-value">${treadDepth.toFixed(2)}</span> mm | Distance: <span id="distance-value">${distance}</span> km</div>
+    <div id="sim-timer">${simulationInterval ? `Simulation Time: ${formatTimer(simTimer)}` : ''}</div>`;
+}
+
+// Refreshes the log table with the latest 20 entries
+function updateLogs() {
+  const tbody = document.querySelector('#log-table tbody');
+  tbody.innerHTML = '';
+  logs.slice(-20).forEach(log => {
+    const tr = document.createElement('tr');
+    tr.innerHTML = `<td>${log.time}</td><td>${log.event}</td><td>${log.details}</td>`;
+    tbody.appendChild(tr);
+  });
+}
+
+// Updates the alert section based on current tread depth
+function updateAlerts() {
+  const alertDiv = document.getElementById('alert-summary');
+  if (alerts.length === 0) {
+    alertDiv.innerHTML = '<div>✅ Tread is good</div>';
+  } else {
+    alertDiv.innerHTML = alerts.map(a => `<div>${a}</div>`).join('');
+  }
+}
+
+// Adds a new log entry and refreshes the log table
+function logEvent(event, details) {
+  logs.push({
+    time: new Date().toLocaleTimeString(),
+    event,
+    details
+  });
+  updateLogs();
+}
+
+// Checks tread depth and sets alerts accordingly
+function checkAlerts() {
+  alerts = [];
+  if (treadDepth < 1.6) {
+    // 30% chance of blowout if tread is critically low
+    if (Math.random() < 0.3) {
+      alerts.push('💥 Tire blowout!');
+      logEvent('Alert', 'Tire blowout occurred!');
+    } else {
+      alerts.push('⚠️ Tread depth critically low!');
+      logEvent('Alert', 'Tread depth critically low!');
+    }
+  } else if (treadDepth < 2) {
+    alerts.push('⚠️ Tread depth critically low!');
+    logEvent('Alert', 'Tread depth critically low!');
+  } else if (treadDepth < 4) {
+    alerts.push('⚠️ Tread depth below recommended level.');
+    logEvent('Alert', 'Tread depth below recommended level.');
+  } else {
+    alerts.push('✅ Tread is good');
+    logEvent('Alert', 'Tread is good');
+  }
+  updateAlerts();
+}
+
+// Runs one simulation step: reduces tread, increases distance, logs it
+function simulateStep() {
+  const prevTread = treadDepth;
+  treadDepth -= 0.5;
+  distance += 5;
+  logEvent('Simulation', `Tread depth dropped from ${prevTread.toFixed(2)} mm to ${treadDepth.toFixed(2)} mm, Distance: ${distance} km`);
+  updateChart();
+  checkAlerts();
+  document.getElementById('last-updated').textContent = new Date().toLocaleTimeString();
+}
+
+// Starts the simulation and sets up intervals
+function startSimulation() {
+  if (simulationInterval) clearInterval(simulationInterval);
+  if (simTimerInterval) clearInterval(simTimerInterval);
+  simTimer = 0;
+  simulationInterval = setInterval(simulateStep, 60000); // every 60 seconds
+  simTimerInterval = setInterval(() => {
+    simTimer++;
+    updateChart();
+  }, 1000); // updates timer every second
+  logEvent('Simulation', 'Simulation started');
+  updateAlerts();
+  simulateStep(); // run first step immediately
+}
+
+// Stops the simulation and clears intervals
+function stopSimulation() {
+  if (simulationInterval) clearInterval(simulationInterval);
+  simulationInterval = null;
+  if (simTimerInterval) clearInterval(simTimerInterval);
+  simTimerInterval = null;
+  logEvent('Simulation', 'Simulation stopped');
+  updateChart();
+  updateAlerts();
+}
+
+// Exports logs to a CSV file and triggers download
+function exportLogs() {
+  const csv = logs.map(l => `${l.time},${l.event},${l.details}`).join('\n');
+  const blob = new Blob([csv], { type: 'text/csv' });
+  const a = document.createElement('a');
+  a.href = URL.createObjectURL(blob);
+  a.download = 'tread_logs.csv';
+  a.click();
+}
+
+// Adds simulation control inputs and buttons to the page
+function setupSimulationControls() {
+  const liveSection = document.getElementById('live');
+  const controls = document.createElement('div');
+  controls.className = 'sim-controls';
+  controls.innerHTML = `
+    <label>Tread Depth (mm): <input type="number" id="tread-input" min="0" max="10" step="0.1" value="${treadDepth}"></label>
+    <label>Distance (km): <input type="number" id="distance-input" min="0" step="1" value="${distance}"></label>
+    <button id="apply-sim">Apply</button>
+    <button id="start-sim">Start Simulation</button>
+    <button id="stop-sim">Stop Simulation</button>
+  `;
+  liveSection.appendChild(controls);
+
+  // Apply button updates values manually
+  document.getElementById('apply-sim').onclick = () => {
+    treadDepth = parseFloat(document.getElementById('tread-input').value);
+    distance = parseInt(document.getElementById('distance-input').value);
+    logEvent('Manual Update', `Tread depth: ${treadDepth} mm, Distance: ${distance} km`);
+    updateChart();
+    checkAlerts();
+  };
+
+  // Start and stop buttons
+  document.getElementById('start-sim').onclick = startSimulation;
+  document.getElementById('stop-sim').onclick = stopSimulation;
+}
+
+// Runs once when page loads
+document.addEventListener('DOMContentLoaded', () => {
+  updateChart();
+  updateLogs();
+  updateAlerts();
+  setupSimulationControls();
+});
+
+// Formats seconds into hh:mm:ss
+function formatTimer(seconds) {
+  const h = Math.floor(seconds / 3600);
+  const m = Math.floor((seconds % 3600) / 60);
+  const s = seconds % 60;
+  return `${h.toString().padStart(2,'0')}:${m.toString().padStart(2,'0')}:${s.toString().padStart(2,'0')}`;
+}
+
+  </script>
+</body>
+</html>

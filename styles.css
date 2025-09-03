@@ -761,6 +761,10 @@ section {
     border: 1px solid rgba(0, 255, 65, 0.3);
 }
 
+.fa-softbyte {
+    height: 40px;
+}
+
 /* Contact Section */
 .contact-content {
     display: grid;
