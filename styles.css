@@ -1,18 +1,18 @@
 :root {
-    --primary-color: #00ff41;
-    --secondary-color: #0d1117;
-    --accent-color: #ff6b6b;
-    --text-primary: #ffffff;
+    --primary-color: #f65cf4;
+    --secondary-color: #b4b4b4;
+    --accent-color: #fa84fc;
+    --text-primary: #fd6bff;
     --text-secondary: #8b949e;
-    --background-primary: #0d1117;
-    --background-secondary: #161b22;
-    --background-card: #21262d;
-    --border-color: #30363d;
-    --gradient-primary: linear-gradient(135deg, #00ff41 0%, #00cc33 100%);
-    --gradient-secondary: linear-gradient(135deg, #ff6b6b 0%, #ee5a52 100%);
+    --background-primary: #ffffff;
+    --background-secondary: #ffffff;
+    --background-card: #543054;
+    --border-color: #951d73;
+    --gradient-primary: linear-gradient(135deg, #f65cf1 0%, #ed3ae7 100%);
+    --gradient-secondary: linear-gradient(135deg, #fc84f8 0%, #f68bfa 100%);
     --font-mono: 'Fira Code', monospace;
     --font-sans: 'Inter', sans-serif;
-    --shadow-glow: 0 0 20px rgba(0, 255, 65, 0.3);
+    --shadow-glow: 0 0 20px rgba(246, 92, 246, 0.3);
     --shadow-card: 0 8px 32px rgba(0, 0, 0, 0.3);
     --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -88,7 +88,7 @@ body {
     position: fixed;
     top: 0;
     width: 100%;
-    background-color: rgba(13, 17, 23, 0.95);
+    background-color: rgba(255, 255, 255, 0.95);
     backdrop-filter: blur(10px);
     border-bottom: 1px solid var(--border-color);
     z-index: 1000;
@@ -315,7 +315,7 @@ body {
 }
 
 .control.maximize {
-    background-color: #28ca42;
+    background-color: #8b5cf6;
 }
 
 .terminal-title {
@@ -505,21 +505,21 @@ section {
             0deg,
             transparent,
             transparent 2px,
-            rgba(0, 255, 65, 0.03) 2px,
-            rgba(0, 255, 65, 0.03) 4px
+            rgba(139, 92, 246, 0.03) 2px,
+            rgba(139, 92, 246, 0.03) 4px
         ),
         repeating-linear-gradient(
             90deg,
             transparent,
             transparent 2px,
-            rgba(0, 255, 65, 0.03) 2px,
-            rgba(0, 255, 65, 0.03) 4px
+            rgba(139, 92, 246, 0.03) 2px,
+            rgba(139, 92, 246, 0.03) 4px
         ),
         linear-gradient(
             45deg,
-            rgba(0, 255, 65, 0.1) 0%,
+            rgba(139, 92, 246, 0.1) 0%,
             rgba(13, 17, 23, 0.9) 50%,
-            rgba(0, 255, 65, 0.1) 100%
+            rgba(139, 92, 246, 0.1) 100%
         );
     opacity: 1;
     transition: opacity 1.5s ease;
@@ -540,7 +540,7 @@ section {
     background: linear-gradient(
         90deg,
         transparent 0%,
-        rgba(0, 255, 65, 0.2) 50%,
+        rgba(139, 92, 246, 0.2) 50%,
         transparent 100%
     );
     animation: matrixScan 3s ease-in-out infinite;
@@ -555,7 +555,7 @@ section {
     transition: opacity 1.5s ease;
     z-index: 4;
     position: relative;
-    text-shadow: 0 0 10px rgba(0, 255, 65, 0.8);
+    text-shadow: 0 0 10px rgba(139, 92, 246, 0.8);
 }
 
 .image-placeholder:hover i {
@@ -569,7 +569,7 @@ section {
     position: relative;
     font-family: var(--font-mono);
     color: var(--primary-color);
-    text-shadow: 0 0 5px rgba(0, 255, 65, 0.8);
+    text-shadow: 0 0 5px rgba(139, 92, 246, 0.8);
 }
 
 .image-placeholder:hover p {
@@ -606,7 +606,7 @@ section {
 .tab-btn:hover {
     border-left-color: var(--primary-color);
     color: var(--primary-color);
-    background-color: rgba(0, 255, 65, 0.1);
+    background-color: rgba(139, 92, 246, 0.1);
 }
 
 .experience-panels {
@@ -753,12 +753,12 @@ section {
 
 .tech-tag {
     padding: 5px 12px;
-    background-color: rgba(0, 255, 65, 0.1);
+    background-color: rgba(139, 92, 246, 0.1);
     color: var(--primary-color);
     border-radius: 20px;
     font-family: var(--font-mono);
     font-size: 0.8rem;
-    border: 1px solid rgba(0, 255, 65, 0.3);
+    border: 1px solid rgba(139, 92, 246, 0.3);
 }
 
 .fa-softbyte {
@@ -812,7 +812,7 @@ section {
 .form-group textarea:focus {
     outline: none;
     border-color: var(--primary-color);
-    box-shadow: 0 0 10px rgba(0, 255, 65, 0.2);
+    box-shadow: 0 0 10px rgba(139, 92, 246, 0.2);
 }
 
 .form-group input::placeholder,
@@ -845,7 +845,7 @@ section {
     border-color: var(--primary-color);
     color: var(--primary-color);
     transform: translateY(-3px);
-    box-shadow: 0 5px 15px rgba(0, 255, 65, 0.3);
+    box-shadow: 0 5px 15px rgba(139, 92, 246, 0.3);
 }
 
 /* Footer */
