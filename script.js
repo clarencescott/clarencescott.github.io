@@ -1,6 +1,6 @@
 // DOM Elements
 const loadingScreen = document.getElementById('loading-screen');
-const navLinks = document.querySelectorAll('.nav-link');
+//const navLinks = document.querySelectorAll('.nav-link');
 const hamburger = document.querySelector('.hamburger');
 const navMenu = document.querySelector('.nav-menu');
 const tabBtns = document.querySelectorAll('.tab-btn');
