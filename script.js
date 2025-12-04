@@ -1,6 +1,5 @@
 // DOM Elements
 const loadingScreen = document.getElementById('loading-screen');
-//const navLinks = document.querySelectorAll('.nav-link');
 const hamburger = document.querySelector('.hamburger');
 const navMenu = document.querySelector('.nav-menu');
 const tabBtns = document.querySelectorAll('.tab-btn');
@@ -8,6 +7,23 @@ const experiencePanels = document.querySelectorAll('.experience-panel');
 const terminalCommand = document.getElementById('terminal-command');
 const terminalOutput = document.getElementById('terminal-output');
 const contactForm = document.getElementById('contact-form');
+
+// Initialize website
+document.addEventListener('DOMContentLoaded', function() {
+    setTimeout(() => {
+        loadingScreen.style.opacity = '0';
+        setTimeout(() => {
+            loadingScreen.style.display = 'none';
+            startTerminalAnimation();
+        }, 500);
+    }, 2500);
+
+    initializeNavigation();
+    initializeExperienceTabs();
+    initializeScrollAnimations();
+    initializeContactForm();
+    createMatrixBackground();
+});
 
 // Terminal commands and responses
 const terminalCommands = [
@@ -43,23 +59,6 @@ Status: Building the future, one line of code at a time...`
 ];
 
 let currentCommandIndex = 0;
-
-// Initialize website
-document.addEventListener('DOMContentLoaded', function() {
-    setTimeout(() => {
-        loadingScreen.style.opacity = '0';
-        setTimeout(() => {
-            loadingScreen.style.display = 'none';
-            startTerminalAnimation();
-        }, 500);
-    }, 2500);
-
-    initializeNavigation();
-    initializeExperienceTabs();
-    initializeScrollAnimations();
-    initializeContactForm();
-    createMatrixBackground();
-});
 
 // Loading screen animation
 function startTerminalAnimation() {
@@ -112,58 +111,76 @@ function showOutput(output, callback) {
 
 // Navigation
 function initializeNavigation() {
+    // Get nav links after DOM is loaded
+    const navLinks = document.querySelectorAll('.nav-link');
+    
     // Mobile menu toggle
-    hamburger.addEventListener('click', () => {
-        navMenu.classList.toggle('active');
-        hamburger.classList.toggle('active');
-    });
+    if (hamburger) {
+        hamburger.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+            hamburger.classList.toggle('active');
+        });
+    }
 
     // Smooth scrolling and active states
-    navLinks.forEach(link => {
-        link.addEventListener('click', (e) => {
-            e.preventDefault();
-            const targetId = link.getAttribute('href').substring(1);
-            const targetSection = document.getElementById(targetId);
-            
-            if (targetSection) {
-                targetSection.scrollIntoView({
-                    behavior: 'smooth',
-                    block: 'start'
-                });
-            }
-
-            // Close mobile menu
-            navMenu.classList.remove('active');
-            hamburger.classList.remove('active');
-
-            // Update active state
-            updateActiveNavLink(link);
-        });
-    });
-
-    // Update active nav link on scroll
-    window.addEventListener('scroll', () => {
-        let current = '';
-        const sections = document.querySelectorAll('section');
-        
-        sections.forEach(section => {
-            const sectionTop = section.offsetTop;
-            const sectionHeight = section.clientHeight;
-            if (window.pageYOffset >= sectionTop - 200) {
-                current = section.getAttribute('id');
-            }
-        });
-
+    if (navLinks.length > 0) {
         navLinks.forEach(link => {
-            link.classList.remove('active');
-            if (link.getAttribute('href') === `#${current}`) {
-                link.classList.add('active');
-            }
+            link.addEventListener('click', (e) => {
+                const href = link.getAttribute('href');
+                
+                // Check if it's an anchor link on the same page
+                if (href && href.startsWith('#')) {
+                    e.preventDefault();
+                    const targetId = href.substring(1);
+                    const targetSection = document.getElementById(targetId);
+                    
+                    if (targetSection) {
+                        targetSection.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }
+
+                    // Close mobile menu
+                    if (navMenu) {
+                        navMenu.classList.remove('active');
+                    }
+                    if (hamburger) {
+                        hamburger.classList.remove('active');
+                    }
+
+                    // Update active state
+                    updateActiveNavLink(link);
+                }
+            });
         });
-    });
+
+        // Update active nav link on scroll
+        window.addEventListener('scroll', () => {
+            let current = '';
+            const sections = document.querySelectorAll('section');
+            
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                if (window.pageYOffset >= sectionTop - 200) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                const href = link.getAttribute('href');
+                if (href === `#${current}`) {
+                    link.classList.add('active');
+                }
+            });
+        });
+    }
 }
 
 function updateActiveNavLink(activeLink) {
+    const navLinks = document.querySelectorAll('.nav-link');
     navLinks.forEach(link => link.classList.remove('active'));
     activeLink.classList.add('active');
 }
@@ -177,6 +194,11 @@ function scrollToSection(sectionId) {
 
 // Experience tabs
 function initializeExperienceTabs() {
+    if (tabBtns.length === 0 || experiencePanels.length === 0) {
+        console.log('Experience tabs not found on this page');
+        return;
+    }
+    
     tabBtns.forEach(btn => {
         btn.addEventListener('click', () => {
             const targetTab = btn.getAttribute('data-tab');
@@ -219,11 +241,22 @@ function initializeScrollAnimations() {
 
 // Contact form
 function initializeContactForm() {
+    if (!contactForm) {
+        console.log('Contact form not found on this page');
+        return;
+    }
+    
     // Set timestamp for security
-    document.getElementById('timestamp').value = Date.now();
+    const timestampField = document.getElementById('timestamp');
+    if (timestampField) {
+        timestampField.value = Date.now();
+    }
     
     contactForm.addEventListener('submit', (e) => {
-        // Perform client-side validation and security checks
+        // Don't prevent default - let FormSubmit handle it
+        console.log('Form submitting to FormSubmit...');
+        
+        // Perform client-side validation
         if (!validateForm()) {
             e.preventDefault();
             return;
@@ -240,7 +273,7 @@ function initializeContactForm() {
         // Rate limiting check (basic)
         const lastSubmission = localStorage.getItem('lastFormSubmission');
         const now = Date.now();
-        if (lastSubmission && (now - parseInt(lastSubmission)) < 60000) { // 1 minute cooldown
+        if (lastSubmission && (now - parseInt(lastSubmission)) < 60000) {
             e.preventDefault();
             showNotification('Please wait before submitting another message.', 'warning');
             return;
@@ -248,20 +281,16 @@ function initializeContactForm() {
         
         // Update UI for submission
         const submitBtn = contactForm.querySelector('button[type="submit"]');
-        const originalText = submitBtn.innerHTML;
-        
-        submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
-        submitBtn.disabled = true;
+        if (submitBtn) {
+            const originalText = submitBtn.innerHTML;
+            submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
+            submitBtn.disabled = true;
+        }
         
         // Set rate limiting
         localStorage.setItem('lastFormSubmission', now.toString());
         
-        // Let the form submit naturally to FormSubmit
-        // The success/error handling will be done by FormSubmit redirect
-        
-        setTimeout(() => {
-            showNotification('Message sent successfully! You will be redirected shortly.', 'success');
-        }, 500);
+        // Let form submit naturally to FormSubmit
     });
 }
 

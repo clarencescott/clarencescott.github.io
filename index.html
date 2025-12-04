@@ -18,9 +18,9 @@
     
     <!-- Geo Tags -->
     <meta name="geo.region" content="US-MI">
-    <meta name="geo.placename" content="Rochester Hills, Michigan">
-    <meta name="geo.position" content="42.6583;-83.1499">
-    <meta name="ICBM" content="42.6583, -83.1499">
+    <meta name="geo.placename" content="Genesee County, Michigan">
+    <meta name="geo.position" content="43.00577863148244;-83.70915662558245">
+    <meta name="ICBM" content="43.00577863148244, -83.70915662558245">
     
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
@@ -33,16 +33,7 @@
     <meta property="og:image:alt" content="Clarence Scott - Software Engineer Portfolio">
     <meta property="og:site_name" content="Clarence Scott Portfolio">
     <meta property="og:locale" content="en_US">
-    
-    <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://clarencescott.vercel.app/">
-    <meta property="twitter:title" content="Clarence Scott | Software Engineer & Tech Innovator">
-    <meta property="twitter:description" content="Passionate software engineer at General Motors and CTO at The New McCree Theatre. Specializing in automotive software, Java, C#, and empowering young developers.">
-    <meta property="twitter:image" content="https://clarencescott.vercel.app/twitter-image.jpg">
-    <meta property="twitter:image:alt" content="Clarence Scott - Software Engineer Portfolio">
-    <meta property="twitter:creator" content="@BioGlytch">
-    <meta property="twitter:site" content="@BioGlytch">
+
     
     <!-- LinkedIn -->
     <meta property="linkedin:owner" content="clarence-scott">
@@ -77,10 +68,10 @@
       "url": "https://clarencescott.vercel.app",
       "image": "https://clarencescott.vercel.app/Badge Photo.jpg",
       "email": "bioglytch.cyber@gmail.com",
-      "telephone": "+1-XXX-XXX-XXXX",
+      "telephone": "+1-810-241-8724",
       "address": {
         "@type": "PostalAddress",
-        "addressLocality": "Rochester Hills",
+        "addressLocality": "Flint",
         "addressRegion": "MI",
         "addressCountry": "US"
       },
@@ -93,7 +84,12 @@
         {
           "@type": "Organization",
           "name": "The New McCree Theatre",
-          "url": "#"
+          "url": "https://www.thenewmccreetheatre.com"
+        },
+        {
+          "@type": "Organization",
+          "name": "BioGlytch Studios",
+          "url": "https://www.bioglytchstudios.vercel.app"
         }
       ],
       "alumniOf": {
@@ -106,7 +102,7 @@
           "addressCountry": "US"
         }
       },
-      "knowsAbout": ["Java", "C#", "JavaScript", "React.js", "Software Engineering", "Automotive Software", "Data Analysis", "Web Development"],
+      "knowsAbout": ["Java", "C#", "JavaScript", "React.js", "Software Engineering", "Automotive Software", "Data Analysis", "Web Development", "Technology Education", "Web Design", "CyberSecurity"],
       "sameAs": [
         "https://www.linkedin.com/in/clarence-scott/",
         "https://github.com/clarencescott",
@@ -143,7 +139,6 @@
     
     <!-- Security Headers -->
     <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdnjs.cloudflare.com; font-src 'self' https://fonts.gstatic.com https://cdnjs.cloudflare.com; img-src 'self' data: https:; connect-src 'self' https://formsubmit.co; form-action 'self' https://formsubmit.co;">
-    <meta http-equiv="X-Content-Type-Options" content="nosniff">
     <meta http-equiv="X-Frame-Options" content="DENY">
     <meta http-equiv="X-XSS-Protection" content="1; mode=block">
     <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
@@ -189,7 +184,7 @@
                 <a href="#home" class="nav-link" data-section="home">home</a>
                 <a href="#about" class="nav-link" data-section="about">about</a>
                 <a href="#experience" class="nav-link" data-section="experience">experience</a>
-                <a href="#projects" class="nav-link" data-section="projects">projects</a>
+                <a href="web-development-projects/web-dev-site.html" class="nav-link" data-section="projects">projects</a>
                 <a href="#contact" class="nav-link" data-section="contact">contact</a>
             </div>
             <div class="hamburger">
@@ -201,44 +196,21 @@
     </nav>
 
     <!-- Hero Section -->
-    <section id="home" class="hero">
-        <div class="matrix-background"></div>
+    <section id="home" class="hero matrix-background">
         <div class="hero-content">
             <div class="hero-text">
                 <h1 class="hero-title">
-                    <span class="typing-text" data-text="Clarence Scott"></span>
+                    <span class="name">Clarence Scott</span>
                 </h1>
                 <h2 class="hero-subtitle">
-                    <span class="accent-text">$</span> Software Engineer & Tech Innovator
+                    <span class="terminal-prompt">$</span> Software Engineer & Tech Innovator
                 </h2>
                 <p class="hero-description">
                     Passionate about developing innovative solutions and empowering the next generation through the S.T.E.E.L. Project.
                 </p>
                 <div class="hero-buttons">
-                    <button class="btn btn-primary" onclick="scrollToSection('projects')">
-                        <i class="fas fa-code"></i> View Projects
-                    </button>
-                    <button class="btn btn-secondary" onclick="scrollToSection('contact')">
-                        <i class="fas fa-envelope"></i> Get In Touch
-                    </button>
-                </div>
-            </div>
-            <div class="terminal-window">
-                <div class="terminal-header">
-                    <div class="terminal-controls">
-                        <span class="control close"></span>
-                        <span class="control minimize"></span>
-                        <span class="control maximize"></span>
-                    </div>
-                    <div class="terminal-title">clarence@bioglytchstudios:~$</div>
-                </div>
-                <div class="terminal-body">
-                    <div class="terminal-line">
-                        <span class="prompt">clarence@bioglytchstudios:~$</span>
-                        <span class="command" id="terminal-command"></span>
-                        <span class="cursor">|</span>
-                    </div>
-                    <div class="terminal-output" id="terminal-output"></div>
+                    <a href="web-development-projects/web-dev-site.html" class="btn btn-primary">View Projects</a>
+                    <a href="#contact" class="btn btn-secondary">Get In Touch</a>
                 </div>
             </div>
         </div>
@@ -253,7 +225,7 @@
             <div class="about-content">
                 <div class="about-text">
                     <p class="about-intro">
-                        Hello! I'm Clarence, a passionate software engineer and tech entrepreneur dedicated to creating innovative solutions and empowering the next generation of developers.
+                        Hello! I'm Clarence, a passionate software developer and tech enthusiast dedicated to creating innovative solutions and empowering the next generation of developers.
                     </p>
                     <p>
                         Through my startup, the <strong>S.T.E.E.L. Project</strong>, I help young minds build strong foundations in web development and engineering technologies. I believe in the power of education and mentorship to transform lives and communities.
@@ -310,6 +282,7 @@
             <div class="experience-content">
                 <div class="experience-tabs">
                     <button class="tab-btn active" data-tab="gm">General Motors</button>
+                    <button class="tab-btn" data-tab="bioglytch-studios">BioGlytch Studios</button>
                     <button class="tab-btn" data-tab="mccree">New McCree Theatre</button>
                     <button class="tab-btn" data-tab="aptiv">APTIV - ACS</button>
                     <button class="tab-btn" data-tab="movimento">Movimento</button>
@@ -325,8 +298,17 @@
                             <li>Utilize Microsoft tools for data management and communication</li>
                         </ul>
                     </div>
+                    <div class="experience-panel" id="bioglytch-studios">
+                        <h3>Owner <span class="company">@ BioGlytch Studios</span></h3>
+                        <p class="duration">Current</p>
+                        <ul class="experience-list">
+                            <li>Assist in common help desk solutions and IT support</li>
+                            <li>Develop software applications and tools for various clients</li>
+                            <li>Contribute to advanced technological solutions and innovations</li>
+                        </ul>
+                    </div>
                     <div class="experience-panel" id="mccree">
-                        <h3>Chief Technology Officer <span class="company">@ The New McCree Theatre</span></h3>
+                        <h3>IT Manager <span class="company">@ The New McCree Theatre</span></h3>
                         <p class="duration">January 2024 - Present</p>
                         <ul class="experience-list">
                             <li>Lead strategic development of digital infrastructure and technical operations</li>
@@ -364,7 +346,6 @@
             <h2 class="section-title">
                 <span class="section-number">03.</span> Featured Projects
             </h2>
-            <h3><a style="color: #8b5cf6;" href="/web-development-projects/web-dev-site.html">Web Development Projects</a></h3>
             <div class="projects-grid">
                 <div class="project-card">
                     <div class="project-header">
@@ -459,20 +440,41 @@
                     <p>
                         I'm always interested in new opportunities, collaborations, and connecting with fellow developers and entrepreneurs. Whether you're looking for a software engineer, need mentorship for your team, or want to discuss the future of technology education, I'd love to hear from you.
                     </p>
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <a href="mailto:bioglytch.cyber@gmail.com">bioglytch.cyber@gmail.com</a>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <a href="tel:+18102418724">+1 (810) 241-8724</a>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Genesee County, Michigan</span>
+                        </div>
+                    </div>
                 </div>
                 <div class="contact-form">
-                    <form id="contact-form" action="https://formsubmit.co/6fcabe6734a3d13ce5426d54c19d39cd" method="POST">
+                    <form id="contact-form" action="https://formsubmit.co/bioglytch.cyber@gmail.com" method="POST">
                         <!-- FormSubmit Configuration -->
                         <input type="hidden" name="_captcha" value="false">
                         <input type="hidden" name="_next" value="https://clarencescott.vercel.app/thank-you.html">
-                        <input type="hidden" name="_subject" value="New Portfolio Contact Form Submission">
+                        <input type="hidden" name="_subject" value="New Contact from Portfolio - Clarence Scott">
                         <input type="hidden" name="_template" value="table">
+                        <input type="hidden" name="_autoresponse" value="Thank you for contacting Clarence Scott! I'll get back to you as soon as possible.">
+                        
+                        <!-- Honeypot for spam protection -->
+                        <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
+                        
+                        <!-- Security timestamp -->
+                        <input type="hidden" name="_timestamp" id="timestamp">
                         
                         <div class="form-group">
-                            <input type="text" id="name" name="name" placeholder="Your Name" required maxlength="100" pattern="[a-zA-Z\s\-\.']+" title="Please enter a valid name (letters, spaces, hyphens, periods, and apostrophes only)">
+                            <input type="text" id="name" name="name" placeholder="Your Name" required maxlength="100" pattern="[a-zA-Z\s\-\.']+" title="Please enter a valid name">
                         </div>
                         <div class="form-group">
-                            <input type="email" id="email" name="email" placeholder="Your Email" required maxlength="254" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" title="Please enter a valid email address">
+                            <input type="email" id="email" name="email" placeholder="Your Email" required maxlength="254" title="Please enter a valid email address">
                         </div>
                         <div class="form-group">
                             <input type="text" id="subject" name="subject" placeholder="Subject" required maxlength="200" minlength="3" title="Subject must be between 3 and 200 characters">
@@ -480,12 +482,6 @@
                         <div class="form-group">
                             <textarea id="message" name="message" placeholder="Your Message" rows="5" required maxlength="2000" minlength="10" title="Message must be between 10 and 2000 characters"></textarea>
                         </div>
-                        
-                        <!-- Honeypot for spam protection -->
-                        <input type="text" name="_honey" style="display:none">
-                        
-                        <!-- Security timestamp -->
-                        <input type="hidden" name="_timestamp" id="timestamp">
                         
                         <button type="submit" class="btn btn-primary">
                             <i class="fas fa-paper-plane"></i> Send Message
@@ -497,7 +493,6 @@
                 <a href="https://www.linkedin.com/in/clarence-scott/" target="_blank" rel="noopener noreferrer" class="social-link"><i class="fab fa-linkedin"></i></a>
                 <a href="https://github.com/clarencescott" target="_blank" rel="noopener noreferrer" class="social-link"><i class="fab fa-github"></i></a>
                 <a href="https://www.youtube.com/@BioGlytch" target="_blank" rel="noopener noreferrer" class="social-link"><i class="fab fa-youtube"></i></a>
-                <a href="mailto:bioglytch.cyber@gmail.com" class="social-link"><i class="fas fa-envelope"></i></a>
             </div>
         </div>
     </section>
@@ -518,5 +513,32 @@
             alert("GitHub link is not available for this project. yet....");
         }
     </script>
+
+    <!---Archived Implementations-->
+    <!---Terminal Output Design:
+    
+    
+                <div class="terminal-body">
+                    <div class="terminal-line">
+                        <span class="prompt">clarence@bioglytchstudios:~$</span>
+                        <span class="command" id="terminal-command"></span>
+                        <span class="cursor">|</span>
+                    </div>
+                    <div class="terminal-output" id="terminal-output"></div>
+                </div>
+
+                .terminal-loader {
+    font-family: var(--font-mono);
+    color: var(--primary-color);
+}
+
+.terminal-loader .text {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    opacity: 0;
+    animation: fadeInUp 0.8s ease forwards;
+}
+
+    -->
 </body>
 </html>
